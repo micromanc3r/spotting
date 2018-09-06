@@ -6,12 +6,38 @@
 //  Copyright © 2018 micromanc3r. All rights reserved.
 //
 
+import Cartography
 import UIKit
 
 class LoginViewController: NIViewController {
+    let titleLabel = UILabel()
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.backgroundColor = .white
+        prepareLayout()
     }
+}
+
+extension LoginViewController {
+    func prepareLayout() {
+        view.backgroundColor = .white
+
+        prepareTitleLabel()
+
+        constrain(titleLabel) { okLabel in
+            okLabel.centerX == okLabel.superview!.centerX
+            okLabel.top == okLabel.superview!.safeAreaLayoutGuide.top + 64
+        }
+    }
+
+    private func prepareTitleLabel() {
+        titleLabel.alpha = 1.0
+        titleLabel.text = R.string.localizable.login_title()
+        titleLabel.font = UIFont.systemFont(ofSize: 36,
+                                            weight: .heavy)
+        view.addSubview(titleLabel)
+    }
+    
+    
 }

@@ -20,6 +20,7 @@
 		6DCBA15F2141C05E00B85C6F /* DefaultMealSettingsStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DCBA15E2141C05E00B85C6F /* DefaultMealSettingsStorage.swift */; };
 		6DCBA1632141C5E400B85C6F /* NIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DCBA1612141C5E300B85C6F /* NIViewController.swift */; };
 		6DCBA1642141C5E400B85C6F /* UIView+Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DCBA1622141C5E400B85C6F /* UIView+Animations.swift */; };
+		6DCBA1662141C7CB00B85C6F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6DCBA1652141C7CB00B85C6F /* Localizable.strings */; };
 		D15730E2A90B9C20CE0570EB /* Pods_Spotting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6648CDB6CC8CCE51D9EC9882 /* Pods_Spotting.framework */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +54,7 @@
 		6DCBA15E2141C05E00B85C6F /* DefaultMealSettingsStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultMealSettingsStorage.swift; sourceTree = "<group>"; };
 		6DCBA1612141C5E300B85C6F /* NIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NIViewController.swift; sourceTree = "<group>"; };
 		6DCBA1622141C5E400B85C6F /* UIView+Animations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Animations.swift"; sourceTree = "<group>"; };
+		6DCBA1652141C7CB00B85C6F /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		A903C78924E3E7400CC71B9F /* Pods_SpottingTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpottingTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBB23C680AA5EA4EB03D52A5 /* Pods-SpottingTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpottingTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SpottingTests/Pods-SpottingTests.release.xcconfig"; sourceTree = "<group>"; };
 		FA7ABDEC848287F7F46A1ECB /* Pods-Spotting.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spotting.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Spotting/Pods-Spotting.debug.xcconfig"; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 				6D4E253D2141A8FD006FD4B2 /* Assets.xcassets */,
 				6D4E253F2141A8FD006FD4B2 /* LaunchScreen.storyboard */,
 				6DCBA14F2141AE6200B85C6F /* R.generated.swift */,
+				6DCBA1652141C7CB00B85C6F /* Localizable.strings */,
 				6D4E25422141A8FD006FD4B2 /* Info.plist */,
 			);
 			path = Spotting;
@@ -276,6 +279,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6D4E25412141A8FD006FD4B2 /* LaunchScreen.storyboard in Resources */,
+				6DCBA1662141C7CB00B85C6F /* Localizable.strings in Resources */,
 				6D4E253E2141A8FD006FD4B2 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
