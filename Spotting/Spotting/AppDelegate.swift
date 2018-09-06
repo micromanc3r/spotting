@@ -11,12 +11,21 @@ import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-    var window: UIWindow?
+    var coordinator: MainCoordinator?
 
     func application(_: UIApplication, didFinishLaunchingWithOptions _: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         setUpLogs()
 
+        startCoordinatorFlow()
+
         return true
+    }
+
+    func startCoordinatorFlow() {
+        let window = UIWindow(frame: UIScreen.main.bounds)
+        coordinator = MainCoordinator(withWindow: window,
+                                      andStorage: DefaultSettingsStorage())
+        coordinator?.start()
     }
 
     func setUpLogs() {

@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  LoginViewController.swift
 //  Spotting
 //
 //  Created by micromanc3r on 06/09/2018.
@@ -8,8 +8,10 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        view.backgroundColor = .white
     }
 }
