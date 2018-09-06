@@ -1,0 +1,19 @@
+project 'Spotting.xcodeproj'
+
+platform :ios, '11.0'
+
+target 'Spotting' do
+  use_frameworks!
+
+  # Pods for Spotting
+  pod 'R.swift', '~> 4.0.0'
+  pod 'Cartography', '~> 3.0.2'
+  pod 'SwiftFormat/CLI', '~> 0.35.4'
+  pod 'microLogger', '~> 1.0.2'
+
+  target 'SpottingTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end
