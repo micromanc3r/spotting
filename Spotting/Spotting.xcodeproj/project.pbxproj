@@ -21,6 +21,9 @@
 		6DCBA1632141C5E400B85C6F /* NIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DCBA1612141C5E300B85C6F /* NIViewController.swift */; };
 		6DCBA1642141C5E400B85C6F /* UIView+Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DCBA1622141C5E400B85C6F /* UIView+Animations.swift */; };
 		6DCBA1662141C7CB00B85C6F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6DCBA1652141C7CB00B85C6F /* Localizable.strings */; };
+		6DCBA1682141CB2C00B85C6F /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DCBA1672141CB2C00B85C6F /* LoginView.swift */; };
+		6DCBA16A2141CD5700B85C6F /* NIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DCBA1692141CD5700B85C6F /* NIView.swift */; };
+		6DCBA16C2141CF2D00B85C6F /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DCBA16B2141CF2D00B85C6F /* LoginViewModel.swift */; };
 		D15730E2A90B9C20CE0570EB /* Pods_Spotting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6648CDB6CC8CCE51D9EC9882 /* Pods_Spotting.framework */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +58,9 @@
 		6DCBA1612141C5E300B85C6F /* NIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NIViewController.swift; sourceTree = "<group>"; };
 		6DCBA1622141C5E400B85C6F /* UIView+Animations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Animations.swift"; sourceTree = "<group>"; };
 		6DCBA1652141C7CB00B85C6F /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		6DCBA1672141CB2C00B85C6F /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		6DCBA1692141CD5700B85C6F /* NIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NIView.swift; sourceTree = "<group>"; };
+		6DCBA16B2141CF2D00B85C6F /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		A903C78924E3E7400CC71B9F /* Pods_SpottingTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpottingTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBB23C680AA5EA4EB03D52A5 /* Pods-SpottingTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpottingTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SpottingTests/Pods-SpottingTests.release.xcconfig"; sourceTree = "<group>"; };
 		FA7ABDEC848287F7F46A1ECB /* Pods-Spotting.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spotting.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Spotting/Pods-Spotting.debug.xcconfig"; sourceTree = "<group>"; };
@@ -139,6 +145,8 @@
 			isa = PBXGroup;
 			children = (
 				6D4E25382141A8FB006FD4B2 /* LoginViewController.swift */,
+				6DCBA1672141CB2C00B85C6F /* LoginView.swift */,
+				6DCBA16B2141CF2D00B85C6F /* LoginViewModel.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -164,6 +172,7 @@
 			isa = PBXGroup;
 			children = (
 				6DCBA1612141C5E300B85C6F /* NIViewController.swift */,
+				6DCBA1692141CD5700B85C6F /* NIView.swift */,
 				6DCBA1622141C5E400B85C6F /* UIView+Animations.swift */,
 			);
 			path = UIComponents;
@@ -430,11 +439,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				6DCBA1552141BD5700B85C6F /* Coordinator.swift in Sources */,
+				6DCBA16A2141CD5700B85C6F /* NIView.swift in Sources */,
 				6D4E25392141A8FB006FD4B2 /* LoginViewController.swift in Sources */,
 				6DCBA1642141C5E400B85C6F /* UIView+Animations.swift in Sources */,
 				6D4E25372141A8FB006FD4B2 /* AppDelegate.swift in Sources */,
 				6DCBA15F2141C05E00B85C6F /* DefaultMealSettingsStorage.swift in Sources */,
+				6DCBA1682141CB2C00B85C6F /* LoginView.swift in Sources */,
 				6DCBA15C2141BFC900B85C6F /* SettingsStorage.swift in Sources */,
+				6DCBA16C2141CF2D00B85C6F /* LoginViewModel.swift in Sources */,
 				6DCBA1572141BD8300B85C6F /* MainCoordinator.swift in Sources */,
 				6DCBA1502141AE6200B85C6F /* R.generated.swift in Sources */,
 				6DCBA1632141C5E400B85C6F /* NIViewController.swift in Sources */,

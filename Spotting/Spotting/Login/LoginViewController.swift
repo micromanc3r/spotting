@@ -11,7 +11,18 @@ import UIKit
 
 class LoginViewController: NIViewController {
     let titleLabel = UILabel()
+    let loginView: LoginView
+    let loginViewModel: LoginViewModel
 
+    override init() {
+        let newModel = LoginViewModel()
+        loginViewModel = newModel
+        loginView = LoginView(loginAction: { (credentials) in
+            newModel.performLoginWith(credentials)
+        })
+        super.init()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -38,6 +49,4 @@ extension LoginViewController {
                                             weight: .heavy)
         view.addSubview(titleLabel)
     }
-    
-    
 }
