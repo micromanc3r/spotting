@@ -66,14 +66,35 @@ struct R: Rswift.Validatable {
   
   /// This `R.string` struct is generated, and contains static references to 1 localization tables.
   struct string {
-    /// This `R.string.localizable` struct is generated, and contains static references to 1 localization keys.
+    /// This `R.string.localizable` struct is generated, and contains static references to 4 localization keys.
     struct localizable {
+      /// Value: Login
+      static let login_view_button_title = Rswift.StringResource(key: "login_view_button_title", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Password
+      static let login_view_password_placeholder = Rswift.StringResource(key: "login_view_password_placeholder", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Spotting
       static let login_title = Rswift.StringResource(key: "login_title", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Username
+      static let login_view_username_placeholder = Rswift.StringResource(key: "login_view_username_placeholder", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      
+      /// Value: Login
+      static func login_view_button_title(_: Void = ()) -> String {
+        return NSLocalizedString("login_view_button_title", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// Value: Password
+      static func login_view_password_placeholder(_: Void = ()) -> String {
+        return NSLocalizedString("login_view_password_placeholder", bundle: R.hostingBundle, comment: "")
+      }
       
       /// Value: Spotting
       static func login_title(_: Void = ()) -> String {
         return NSLocalizedString("login_title", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// Value: Username
+      static func login_view_username_placeholder(_: Void = ()) -> String {
+        return NSLocalizedString("login_view_username_placeholder", bundle: R.hostingBundle, comment: "")
       }
       
       fileprivate init() {}
