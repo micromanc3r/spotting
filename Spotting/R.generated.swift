@@ -66,16 +66,25 @@ struct R: Rswift.Validatable {
   
   /// This `R.string` struct is generated, and contains static references to 1 localization tables.
   struct string {
-    /// This `R.string.localizable` struct is generated, and contains static references to 4 localization keys.
+    /// This `R.string.localizable` struct is generated, and contains static references to 6 localization keys.
     struct localizable {
+      /// Value: Forgot password?
+      static let login_forgot_button = Rswift.StringResource(key: "login_forgot_button", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Login
       static let login_view_button_title = Rswift.StringResource(key: "login_view_button_title", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Password
       static let login_view_password_placeholder = Rswift.StringResource(key: "login_view_password_placeholder", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Sign up
+      static let login_signup_button = Rswift.StringResource(key: "login_signup_button", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Spotting
       static let login_title = Rswift.StringResource(key: "login_title", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Username
       static let login_view_username_placeholder = Rswift.StringResource(key: "login_view_username_placeholder", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      
+      /// Value: Forgot password?
+      static func login_forgot_button(_: Void = ()) -> String {
+        return NSLocalizedString("login_forgot_button", bundle: R.hostingBundle, comment: "")
+      }
       
       /// Value: Login
       static func login_view_button_title(_: Void = ()) -> String {
@@ -85,6 +94,11 @@ struct R: Rswift.Validatable {
       /// Value: Password
       static func login_view_password_placeholder(_: Void = ()) -> String {
         return NSLocalizedString("login_view_password_placeholder", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// Value: Sign up
+      static func login_signup_button(_: Void = ()) -> String {
+        return NSLocalizedString("login_signup_button", bundle: R.hostingBundle, comment: "")
       }
       
       /// Value: Spotting

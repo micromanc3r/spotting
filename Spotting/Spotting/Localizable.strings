@@ -7,6 +7,8 @@
 */
 
 "login_title" = "Spotting";
+"login_signup_button" = "Sign up";
+"login_forgot_button" = "Forgot password?";
 "login_view_button_title" = "Login";
 "login_view_username_placeholder" = "Username";
 "login_view_password_placeholder" = "Password";

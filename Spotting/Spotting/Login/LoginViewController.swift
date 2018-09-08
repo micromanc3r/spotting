@@ -8,11 +8,15 @@
 
 import Cartography
 import UIKit
+import MicroLogger
 
 class LoginViewController: NIViewController {
     let titleLabel = UILabel()
     let loginView: LoginView
     let loginViewModel: LoginViewModel
+    
+    let signUpButton = UIButton()
+    let forgotPasswordButton = UIButton()
 
     override init() {
         let newModel = LoginViewModel()
@@ -36,14 +40,26 @@ extension LoginViewController {
 
         prepareTitleLabel()
         prepareLoginView()
-
-        constrain(view, titleLabel, loginView) { superview, okLabel, loginView in
-            okLabel.centerX == superview.centerX
-            okLabel.top == superview.safeAreaLayoutGuide.top + 64
-            
-            loginView.centerY == superview.centerY
-            loginView.left == superview.left + 64
-            loginView.right == superview.right - 64
+        prepareSignUpButton()
+        prepareForgotPasswordButton()
+        
+        constrain(view,
+                  titleLabel,
+                  loginView,
+                  signUpButton,
+                  forgotPasswordButton) { superview, okLabel, loginView, signUpButton, forgotPasswordButton in
+                    okLabel.centerX == superview.centerX
+                    okLabel.top == superview.safeAreaLayoutGuide.top + 64
+                    
+                    loginView.centerY == superview.centerY
+                    loginView.left == superview.left + 64
+                    loginView.right == superview.right - 64
+                    
+                    signUpButton.centerX == superview.centerX
+                    signUpButton.top == loginView.bottom + 64
+                    
+                    forgotPasswordButton.centerX == superview.centerX
+                    forgotPasswordButton.top == signUpButton.bottom + 8
         }
     }
 
@@ -57,5 +73,35 @@ extension LoginViewController {
     
     private func prepareLoginView() {
         view.addSubview(loginView)
+    }
+    
+    private func prepareSignUpButton() {
+        signUpButton.setTitleColor(.black, for: .normal)
+        signUpButton.setTitle(R.string.localizable.login_signup_button(), for: .normal)
+        signUpButton.addTarget(self,
+                               action: #selector(signUp),
+                               for: .touchUpInside)
+        view.addSubview(signUpButton)
+    }
+    
+    private func prepareForgotPasswordButton() {
+        forgotPasswordButton.setTitleColor(.black, for: .normal)
+        forgotPasswordButton.setTitle(R.string.localizable.login_forgot_button(), for: .normal)
+        forgotPasswordButton.addTarget(self,
+                                       action: #selector(forgotPassword),
+                                       for: .touchUpInside)
+        view.addSubview(forgotPasswordButton)
+    }
+}
+
+extension LoginViewController {
+    @objc private func signUp() {
+        MLogger.logVerbose(sender: self,
+                           andMessage: "Sign UP")
+    }
+    
+    @objc private func forgotPassword() {
+        MLogger.logVerbose(sender: self,
+                           andMessage: "Forgot password")
     }
 }
