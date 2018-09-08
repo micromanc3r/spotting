@@ -20,13 +20,12 @@ class LoginView: NIView {
     init(loginAction: @escaping (LoginCredentials) -> Void) {
         self.loginAction = loginAction
         super.init()
-
         prepareLayout()
     }
 
     private func prepareLayout() {
-        loginButton.setTitle(R.string.localizable.login_view_button_title(),
-                             for: .normal)
+        loginButton.setTitleColor(.black, for: .normal)
+        loginButton.setTitle(R.string.localizable.login_view_button_title(), for: .normal)
         loginButton.addTarget(self,
                               action: #selector(loginButtonPressed),
                               for: .touchUpInside)
@@ -38,7 +37,10 @@ class LoginView: NIView {
         addSubview(usernameField)
         addSubview(passwordField)
         
-        constrain(loginButton, usernameField, passwordField, self) { loginButton, usernameField, passwordField, superview in
+        constrain(loginButton,
+                  usernameField,
+                  passwordField,
+                  self) { loginButton, usernameField, passwordField, superview in
             usernameField.top == superview.top + 8
             usernameField.left == superview.left + 8
             usernameField.right == superview.right - 8
@@ -51,7 +53,7 @@ class LoginView: NIView {
             loginButton.centerX == superview.centerX
             loginButton.left >= superview.left + 8
             loginButton.right <= superview.right - 8
-            
+            loginButton.bottom == superview.bottom - 8
         }
     }
 }

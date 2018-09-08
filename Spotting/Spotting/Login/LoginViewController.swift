@@ -35,10 +35,15 @@ extension LoginViewController {
         view.backgroundColor = .white
 
         prepareTitleLabel()
+        prepareLoginView()
 
-        constrain(titleLabel) { okLabel in
-            okLabel.centerX == okLabel.superview!.centerX
-            okLabel.top == okLabel.superview!.safeAreaLayoutGuide.top + 64
+        constrain(view, titleLabel, loginView) { superview, okLabel, loginView in
+            okLabel.centerX == superview.centerX
+            okLabel.top == superview.safeAreaLayoutGuide.top + 64
+            
+            loginView.centerY == superview.centerY
+            loginView.left == superview.left + 64
+            loginView.right == superview.right - 64
         }
     }
 
@@ -48,5 +53,9 @@ extension LoginViewController {
         titleLabel.font = UIFont.systemFont(ofSize: 36,
                                             weight: .heavy)
         view.addSubview(titleLabel)
+    }
+    
+    private func prepareLoginView() {
+        view.addSubview(loginView)
     }
 }
