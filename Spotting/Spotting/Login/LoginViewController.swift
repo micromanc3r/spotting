@@ -17,12 +17,12 @@ class LoginViewController: NIViewController {
     override init() {
         let newModel = LoginViewModel()
         loginViewModel = newModel
-        loginView = LoginView(loginAction: { (credentials) in
+        loginView = LoginView(loginAction: { credentials in
             newModel.performLoginWith(credentials)
         })
         super.init()
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 

@@ -9,26 +9,67 @@
 @testable import Spotting
 import XCTest
 
-class SpottingTests: XCTestCase {
-    override func setUp() {
-        super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
-    }
-
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        measure {
-            // Put the code you want to measure the time of here.
+class LoginViewTests: XCTestCase {
+    func testEmptyInit() {
+        let loginView = LoginView { credentials in
+            XCTAssertFalse(credentials.username.isEmpty)
+            XCTAssertFalse(credentials.password.isEmpty)
         }
+
+        XCTAssertNil(loginView.passwordLabel.backgroundColor)
+        XCTAssertNil(loginView.usernameLabel.backgroundColor)
+
+        loginView.loginButton.sendActions(for: .touchUpInside)
+
+        XCTAssertEqual(loginView.passwordLabel.backgroundColor, .red)
+        XCTAssertEqual(loginView.passwordLabel.backgroundColor, .red)
+    }
+
+    func testInvalidUsername() {
+        let loginView = LoginView { credentials in
+            XCTAssertFalse(credentials.username.isEmpty)
+            XCTAssertFalse(credentials.password.isEmpty)
+        }
+
+        loginView.passwordLabel.text = "validpassword"
+        loginView.usernameLabel.text = "iu" // invalid username
+
+        loginView.loginButton.sendActions(for: .touchUpInside)
+
+        XCTAssertNil(loginView.passwordLabel.backgroundColor)
+        XCTAssertEqual(loginView.usernameLabel.backgroundColor, .red)
+    }
+    
+    func testInvalidPassword() {
+        let loginView = LoginView { credentials in
+            XCTAssertFalse(credentials.username.isEmpty)
+            XCTAssertFalse(credentials.password.isEmpty)
+        }
+        
+        loginView.passwordLabel.text = "ip" // invalid password
+        loginView.usernameLabel.text = "validUsername"
+        
+        loginView.loginButton.sendActions(for: .touchUpInside)
+        
+        XCTAssertEqual(loginView.passwordLabel.backgroundColor, .red)
+        XCTAssertNil(loginView.usernameLabel.backgroundColor)
+    }
+    
+    func testHappyCase() {
+        let loginView = LoginView { credentials in
+            XCTAssertFalse(credentials.username.isEmpty)
+            XCTAssertFalse(credentials.password.isEmpty)
+            
+            XCTAssertEqual(credentials.username, "validUsername")
+            XCTAssertEqual(credentials.password, "validPassword")
+        }
+        
+        loginView.passwordLabel.text = "validPassword"
+        loginView.usernameLabel.text = "validUsername"
+        
+        loginView.loginButton.sendActions(for: .touchUpInside)
+        
+        XCTAssertNil(loginView.passwordLabel.backgroundColor)
+        XCTAssertNil(loginView.usernameLabel.backgroundColor)
     }
 }
