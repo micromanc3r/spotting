@@ -11,6 +11,8 @@ import UIKit
 import MicroLogger
 
 class LoginViewController: NIViewController {
+    unowned var delegate: LoginViewDelegate
+    
     let titleLabel = UILabel()
     let loginView: LoginView
     let loginViewModel: LoginViewModel
@@ -18,7 +20,9 @@ class LoginViewController: NIViewController {
     let signUpButton = UIButton()
     let forgotPasswordButton = UIButton()
 
-    override init() {
+    init(withDelegate delegate: LoginViewDelegate) {
+        self.delegate = delegate
+        
         let newModel = LoginViewModel()
         loginViewModel = newModel
         loginView = LoginView(loginAction: { credentials in
@@ -96,12 +100,10 @@ extension LoginViewController {
 
 extension LoginViewController {
     @objc private func signUp() {
-        MLogger.logVerbose(sender: self,
-                           andMessage: "Sign UP")
+        delegate.newUserSignUp()
     }
     
     @objc private func forgotPassword() {
-        MLogger.logVerbose(sender: self,
-                           andMessage: "Forgot password")
+        delegate.retrieveForgottenPassword()
     }
 }

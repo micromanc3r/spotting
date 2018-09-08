@@ -29,7 +29,7 @@ class MainCoordinator: Coordinator {
     }
 
     func startLoginFlow() {
-        let loginVC = LoginViewController()
+        let loginVC = LoginViewController(withDelegate: self)
         navigationController.pushViewController(loginVC,
                                                 animated: false)
 
@@ -38,5 +38,22 @@ class MainCoordinator: Coordinator {
 
     func startMainFlow() {
         window.rootViewController = navigationController
+    }
+}
+
+extension MainCoordinator: LoginViewDelegate {
+    func loginSuccessful() {
+        MLogger.logVerbose(sender: self,
+                           andMessage: "Login successful")
+    }
+    
+    func newUserSignUp() {
+        MLogger.logVerbose(sender: self,
+                           andMessage: "Go to sign up")
+    }
+    
+    func retrieveForgottenPassword() {
+        MLogger.logVerbose(sender: self,
+                           andMessage: "Retrieve password")
     }
 }
