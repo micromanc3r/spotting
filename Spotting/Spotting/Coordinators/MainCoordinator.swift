@@ -50,10 +50,17 @@ extension MainCoordinator: LoginViewDelegate {
     func newUserSignUp() {
         MLogger.logVerbose(sender: self,
                            andMessage: "Go to sign up")
+        let signupVC = SignupViewController(withDelegate: self)
+        navigationController.pushViewController(signupVC,
+                                                animated: true)
     }
     
     func retrieveForgottenPassword() {
         MLogger.logVerbose(sender: self,
                            andMessage: "Retrieve password")
     }
+}
+
+extension MainCoordinator: SignupDelegate {
+    
 }
