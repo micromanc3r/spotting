@@ -15,4 +15,14 @@ class SignupViewController: NIViewController {
         self.delegate = delegate
         super.init()
     }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        prepareLayout()
+    }
+    
+    func prepareLayout() {
+        view.backgroundColor = .white
+    }
 }
