@@ -58,9 +58,16 @@ extension MainCoordinator: LoginViewDelegate {
     func retrieveForgottenPassword() {
         MLogger.logVerbose(sender: self,
                            andMessage: "Retrieve password")
+        let forgotPasswordVC = ForgotPasswordViewController(withDelegate: self)
+        navigationController.pushViewController(forgotPasswordVC,
+                                                animated: true)
     }
 }
 
 extension MainCoordinator: SignupDelegate {
+    
+}
+
+extension MainCoordinator: ForgotPasswordDelegate {
     
 }
