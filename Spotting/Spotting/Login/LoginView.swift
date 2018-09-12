@@ -22,7 +22,9 @@ class LoginView: NIView {
         super.init()
         prepareLayout()
     }
+}
 
+extension LoginView {
     private func prepareLayout() {
         loginButton.setTitleColor(.black, for: .normal)
         loginButton.setTitle(R.string.localizable.login_view_button_title(), for: .normal)

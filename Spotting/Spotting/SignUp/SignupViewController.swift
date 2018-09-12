@@ -29,7 +29,9 @@ class SignupViewController: NIViewController {
         
         prepareLayout()
     }
-    
+}
+
+extension SignupViewController {
     func prepareLayout() {
         view.backgroundColor = .white
         

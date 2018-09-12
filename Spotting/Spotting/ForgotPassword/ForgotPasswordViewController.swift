@@ -21,7 +21,9 @@ class ForgotPasswordViewController: NIViewController {
         
         prepareLayout()
     }
-    
+}
+
+extension ForgotPasswordViewController {
     func prepareLayout() {
         view.backgroundColor = .white
     }
