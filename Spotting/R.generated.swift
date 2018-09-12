@@ -66,20 +66,40 @@ struct R: Rswift.Validatable {
   
   /// This `R.string` struct is generated, and contains static references to 1 localization tables.
   struct string {
-    /// This `R.string.localizable` struct is generated, and contains static references to 6 localization keys.
+    /// This `R.string.localizable` struct is generated, and contains static references to 11 localization keys.
     struct localizable {
+      /// Value: Confirm password
+      static let signup_confirm_password = Rswift.StringResource(key: "signup_confirm_password", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: E-mail
+      static let signup_email = Rswift.StringResource(key: "signup_email", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Forgot password?
       static let login_forgot_button = Rswift.StringResource(key: "login_forgot_button", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Login
       static let login_view_button_title = Rswift.StringResource(key: "login_view_button_title", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Password
       static let login_view_password_placeholder = Rswift.StringResource(key: "login_view_password_placeholder", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Password
+      static let signup_password = Rswift.StringResource(key: "signup_password", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Sign up
       static let login_signup_button = Rswift.StringResource(key: "login_signup_button", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Sign up
+      static let signup_signup_button = Rswift.StringResource(key: "signup_signup_button", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Spotting
       static let login_title = Rswift.StringResource(key: "login_title", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Username
       static let login_view_username_placeholder = Rswift.StringResource(key: "login_view_username_placeholder", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Username
+      static let signup_username = Rswift.StringResource(key: "signup_username", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      
+      /// Value: Confirm password
+      static func signup_confirm_password(_: Void = ()) -> String {
+        return NSLocalizedString("signup_confirm_password", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// Value: E-mail
+      static func signup_email(_: Void = ()) -> String {
+        return NSLocalizedString("signup_email", bundle: R.hostingBundle, comment: "")
+      }
       
       /// Value: Forgot password?
       static func login_forgot_button(_: Void = ()) -> String {
@@ -96,9 +116,19 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("login_view_password_placeholder", bundle: R.hostingBundle, comment: "")
       }
       
+      /// Value: Password
+      static func signup_password(_: Void = ()) -> String {
+        return NSLocalizedString("signup_password", bundle: R.hostingBundle, comment: "")
+      }
+      
       /// Value: Sign up
       static func login_signup_button(_: Void = ()) -> String {
         return NSLocalizedString("login_signup_button", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// Value: Sign up
+      static func signup_signup_button(_: Void = ()) -> String {
+        return NSLocalizedString("signup_signup_button", bundle: R.hostingBundle, comment: "")
       }
       
       /// Value: Spotting
@@ -109,6 +139,11 @@ struct R: Rswift.Validatable {
       /// Value: Username
       static func login_view_username_placeholder(_: Void = ()) -> String {
         return NSLocalizedString("login_view_username_placeholder", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// Value: Username
+      static func signup_username(_: Void = ()) -> String {
+        return NSLocalizedString("signup_username", bundle: R.hostingBundle, comment: "")
       }
       
       fileprivate init() {}

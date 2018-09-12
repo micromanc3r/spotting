@@ -12,3 +12,8 @@
 "login_view_button_title" = "Login";
 "login_view_username_placeholder" = "Username";
 "login_view_password_placeholder" = "Password";
+"signup_username" = "Username";
+"signup_email" = "E-mail";
+"signup_password" = "Password";
+"signup_confirm_password" = "Confirm password";
+"signup_signup_button" = "Sign up";
