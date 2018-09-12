@@ -35,21 +35,11 @@ extension SignupViewController {
     func prepareLayout() {
         view.backgroundColor = .white
         
-        usernameField.placeholder = R.string.localizable.signup_username()
-        emailField.placeholder = R.string.localizable.signup_email()
-        passwordField.placeholder = R.string.localizable.signup_password()
-        confirmPasswordField.placeholder = R.string.localizable.signup_confirm_password()
-        
-        signupButton.setTitle(R.string.localizable.signup_signup_button(),
-                              for: .normal)
-        signupButton.setTitleColor(.black,
-                                   for: .normal)
-        
-        view.addSubview(usernameField)
-        view.addSubview(emailField)
-        view.addSubview(passwordField)
-        view.addSubview(confirmPasswordField)
-        view.addSubview(signupButton)
+        prepareUsername()
+        prepareEmail()
+        preparePassword()
+        prepareConfirmPassword()
+        prepareSignUp()
         
         constrain(view,
                   usernameField,
@@ -72,5 +62,33 @@ extension SignupViewController {
                     signupButton.top == confirmPasswordField.bottom + 32
                     signupButton.centerX == superview.centerX
         }
+    }
+    
+    private func prepareUsername() {
+        usernameField.placeholder = R.string.localizable.signup_username()
+        view.addSubview(usernameField)
+    }
+    
+    private func prepareEmail() {
+        emailField.placeholder = R.string.localizable.signup_email()
+        view.addSubview(emailField)
+    }
+    
+    private func preparePassword() {
+        passwordField.placeholder = R.string.localizable.signup_password()
+        view.addSubview(passwordField)
+    }
+    
+    private func prepareConfirmPassword() {
+        confirmPasswordField.placeholder = R.string.localizable.signup_confirm_password()
+        view.addSubview(confirmPasswordField)
+    }
+    
+    private func prepareSignUp() {
+        signupButton.setTitle(R.string.localizable.signup_signup_button(),
+                              for: .normal)
+        signupButton.setTitleColor(.black,
+                                   for: .normal)
+        view.addSubview(signupButton)
     }
 }
