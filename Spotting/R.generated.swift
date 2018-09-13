@@ -66,10 +66,12 @@ struct R: Rswift.Validatable {
   
   /// This `R.string` struct is generated, and contains static references to 1 localization tables.
   struct string {
-    /// This `R.string.localizable` struct is generated, and contains static references to 11 localization keys.
+    /// This `R.string.localizable` struct is generated, and contains static references to 14 localization keys.
     struct localizable {
       /// Value: Confirm password
       static let signup_confirm_password = Rswift.StringResource(key: "signup_confirm_password", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: E-mail
+      static let forgotpswd_email = Rswift.StringResource(key: "forgotpswd_email", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: E-mail
       static let signup_email = Rswift.StringResource(key: "signup_email", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Forgot password?
@@ -80,12 +82,16 @@ struct R: Rswift.Validatable {
       static let login_view_password_placeholder = Rswift.StringResource(key: "login_view_password_placeholder", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Password
       static let signup_password = Rswift.StringResource(key: "signup_password", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Send email
+      static let forgotpswd_send_email = Rswift.StringResource(key: "forgotpswd_send_email", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Sign up
       static let login_signup_button = Rswift.StringResource(key: "login_signup_button", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Sign up
       static let signup_signup_button = Rswift.StringResource(key: "signup_signup_button", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Spotting
       static let login_title = Rswift.StringResource(key: "login_title", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Username
+      static let forgotpswd_username = Rswift.StringResource(key: "forgotpswd_username", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Username
       static let login_view_username_placeholder = Rswift.StringResource(key: "login_view_username_placeholder", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Username
@@ -94,6 +100,11 @@ struct R: Rswift.Validatable {
       /// Value: Confirm password
       static func signup_confirm_password(_: Void = ()) -> String {
         return NSLocalizedString("signup_confirm_password", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// Value: E-mail
+      static func forgotpswd_email(_: Void = ()) -> String {
+        return NSLocalizedString("forgotpswd_email", bundle: R.hostingBundle, comment: "")
       }
       
       /// Value: E-mail
@@ -121,6 +132,11 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("signup_password", bundle: R.hostingBundle, comment: "")
       }
       
+      /// Value: Send email
+      static func forgotpswd_send_email(_: Void = ()) -> String {
+        return NSLocalizedString("forgotpswd_send_email", bundle: R.hostingBundle, comment: "")
+      }
+      
       /// Value: Sign up
       static func login_signup_button(_: Void = ()) -> String {
         return NSLocalizedString("login_signup_button", bundle: R.hostingBundle, comment: "")
@@ -134,6 +150,11 @@ struct R: Rswift.Validatable {
       /// Value: Spotting
       static func login_title(_: Void = ()) -> String {
         return NSLocalizedString("login_title", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// Value: Username
+      static func forgotpswd_username(_: Void = ()) -> String {
+        return NSLocalizedString("forgotpswd_username", bundle: R.hostingBundle, comment: "")
       }
       
       /// Value: Username

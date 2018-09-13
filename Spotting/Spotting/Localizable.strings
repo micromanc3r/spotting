@@ -17,3 +17,6 @@
 "signup_password" = "Password";
 "signup_confirm_password" = "Confirm password";
 "signup_signup_button" = "Sign up";
+"forgotpswd_send_email" = "Send email";
+"forgotpswd_username" = "Username";
+"forgotpswd_email" = "E-mail";
