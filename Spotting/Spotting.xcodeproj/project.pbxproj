@@ -18,6 +18,7 @@
 		6D4E253E2141A8FD006FD4B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6D4E253D2141A8FD006FD4B2 /* Assets.xcassets */; };
 		6D4E25412141A8FD006FD4B2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D4E253F2141A8FD006FD4B2 /* LaunchScreen.storyboard */; };
 		6D4E254C2141A8FD006FD4B2 /* SpottingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D4E254B2141A8FD006FD4B2 /* SpottingTests.swift */; };
+		6D6E058B214B8C9B00283F3A /* NITabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6E058A214B8C9B00283F3A /* NITabBarController.swift */; };
 		6DCBA1502141AE6200B85C6F /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DCBA14F2141AE6200B85C6F /* R.generated.swift */; };
 		6DCBA1552141BD5700B85C6F /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DCBA1542141BD5700B85C6F /* Coordinator.swift */; };
 		6DCBA1572141BD8300B85C6F /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DCBA1562141BD8200B85C6F /* MainCoordinator.swift */; };
@@ -60,6 +61,7 @@
 		6D4E25472141A8FD006FD4B2 /* SpottingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpottingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D4E254B2141A8FD006FD4B2 /* SpottingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpottingTests.swift; sourceTree = "<group>"; };
 		6D4E254D2141A8FD006FD4B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6D6E058A214B8C9B00283F3A /* NITabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NITabBarController.swift; sourceTree = "<group>"; };
 		6DCBA14F2141AE6200B85C6F /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		6DCBA1542141BD5700B85C6F /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		6DCBA1562141BD8200B85C6F /* MainCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
@@ -203,6 +205,7 @@
 			isa = PBXGroup;
 			children = (
 				6DCBA1612141C5E300B85C6F /* NIViewController.swift */,
+				6D6E058A214B8C9B00283F3A /* NITabBarController.swift */,
 				6DCBA1692141CD5700B85C6F /* NIView.swift */,
 				6DCBA1622141C5E400B85C6F /* UIView+Animations.swift */,
 			);
@@ -481,6 +484,7 @@
 				6DCBA1682141CB2C00B85C6F /* LoginView.swift in Sources */,
 				6D2E2A9B21464A3C00929C57 /* SignupViewController.swift in Sources */,
 				6DCBA15C2141BFC900B85C6F /* SettingsStorage.swift in Sources */,
+				6D6E058B214B8C9B00283F3A /* NITabBarController.swift in Sources */,
 				6DCBA16C2141CF2D00B85C6F /* LoginViewModel.swift in Sources */,
 				6D2E2AA22148472000929C57 /* ForgotPasswordDelegate.swift in Sources */,
 				6DCBA1572141BD8300B85C6F /* MainCoordinator.swift in Sources */,
