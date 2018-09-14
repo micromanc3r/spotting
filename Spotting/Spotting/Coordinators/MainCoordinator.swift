@@ -45,6 +45,22 @@ extension MainCoordinator: LoginViewDelegate {
     func loginSuccessful() {
         MLogger.logVerbose(sender: self,
                            andMessage: "Login successful")
+        
+        let mainVC = MainTabBarController()
+        guard let rootViewController = window.rootViewController else {
+            return
+        }
+        
+        mainVC.view.frame = rootViewController.view.frame
+        mainVC.view.layoutIfNeeded()
+        
+        UIView.transition(with: window,
+                          duration: 0.3,
+                          options: .transitionCrossDissolve,
+                          animations: {
+                            self.window.rootViewController = mainVC
+        },
+                          completion: nil)
     }
     
     func newUserSignUp() {

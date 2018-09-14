@@ -10,9 +10,16 @@ import Foundation
 import MicroLogger
 
 class LoginViewModel {
+    unowned var delegate: LoginViewDelegate
+    
+    init(withDelegate delegate: LoginViewDelegate) {
+        self.delegate = delegate
+    }
+    
     func performLoginWith(_ credentials: LoginCredentials) {
         MLogger.logVerbose(sender: self,
                            andMessage: "Loggin in user: \(credentials.username)")
+        delegate.loginSuccessful()
     }
 }
 

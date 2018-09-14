@@ -23,7 +23,7 @@ class LoginViewController: NIViewController {
     init(withDelegate delegate: LoginViewDelegate) {
         self.delegate = delegate
         
-        let newModel = LoginViewModel()
+        let newModel = LoginViewModel(withDelegate: delegate)
         loginViewModel = newModel
         loginView = LoginView(loginAction: { credentials in
             newModel.performLoginWith(credentials)
