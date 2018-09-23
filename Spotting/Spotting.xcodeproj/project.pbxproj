@@ -301,9 +301,11 @@
 				TargetAttributes = {
 					6D4E25322141A8FB006FD4B2 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1000;
 					};
 					6D4E25462141A8FD006FD4B2 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1000;
 						TestTargetID = 6D4E25322141A8FB006FD4B2;
 					};
 				};
@@ -663,7 +665,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.micromanc3r.Spotting;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -682,7 +684,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.micromanc3r.Spotting;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -703,7 +705,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.micromanc3r.SpottingTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Spotting.app/Spotting";
 			};
@@ -725,7 +727,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.micromanc3r.SpottingTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Spotting.app/Spotting";
 			};
