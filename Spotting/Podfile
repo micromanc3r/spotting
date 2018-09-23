@@ -7,9 +7,9 @@ target 'Spotting' do
 
   # Pods for Spotting
   pod 'R.swift', '~> 4.0.0'
-  pod 'Cartography', '~> 3.0.2'
-  pod 'SwiftFormat/CLI', '~> 0.35.4'
-  pod 'microLogger', '~> 1.0.2'
+  pod 'Cartography', '~> 3.1.0'
+  pod 'SwiftFormat/CLI', '~> 0.35.5'
+  pod 'microLogger', '~> 1.0.3'
 
   target 'SpottingTests' do
     inherit! :search_paths
