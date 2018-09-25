@@ -46,7 +46,7 @@ extension MainCoordinator: LoginViewDelegate {
         MLogger.logVerbose(sender: self,
                            andMessage: "Login successful")
         
-        let mainVC = MainTabBarController()
+        let mainVC = MainTabBarController(withViewControllers: [SpotsListViewController(), SettingsViewController()])
         guard let rootViewController = window.rootViewController else {
             return
         }

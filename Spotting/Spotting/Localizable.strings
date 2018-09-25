@@ -20,3 +20,5 @@
 "forgotpswd_send_email" = "Send email";
 "forgotpswd_username" = "Username";
 "forgotpswd_email" = "E-mail";
+"list.title" = "Spots";
+"settings.title" = "Settings";

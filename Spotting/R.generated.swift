@@ -66,7 +66,7 @@ struct R: Rswift.Validatable {
   
   /// This `R.string` struct is generated, and contains static references to 1 localization tables.
   struct string {
-    /// This `R.string.localizable` struct is generated, and contains static references to 14 localization keys.
+    /// This `R.string.localizable` struct is generated, and contains static references to 16 localization keys.
     struct localizable {
       /// Value: Confirm password
       static let signup_confirm_password = Rswift.StringResource(key: "signup_confirm_password", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
@@ -84,10 +84,14 @@ struct R: Rswift.Validatable {
       static let signup_password = Rswift.StringResource(key: "signup_password", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Send email
       static let forgotpswd_send_email = Rswift.StringResource(key: "forgotpswd_send_email", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Settings
+      static let settingsTitle = Rswift.StringResource(key: "settings.title", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Sign up
       static let login_signup_button = Rswift.StringResource(key: "login_signup_button", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Sign up
       static let signup_signup_button = Rswift.StringResource(key: "signup_signup_button", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Spots
+      static let listTitle = Rswift.StringResource(key: "list.title", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Spotting
       static let login_title = Rswift.StringResource(key: "login_title", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Username
@@ -137,6 +141,11 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("forgotpswd_send_email", bundle: R.hostingBundle, comment: "")
       }
       
+      /// Value: Settings
+      static func settingsTitle(_: Void = ()) -> String {
+        return NSLocalizedString("settings.title", bundle: R.hostingBundle, comment: "")
+      }
+      
       /// Value: Sign up
       static func login_signup_button(_: Void = ()) -> String {
         return NSLocalizedString("login_signup_button", bundle: R.hostingBundle, comment: "")
@@ -145,6 +154,11 @@ struct R: Rswift.Validatable {
       /// Value: Sign up
       static func signup_signup_button(_: Void = ()) -> String {
         return NSLocalizedString("signup_signup_button", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// Value: Spots
+      static func listTitle(_: Void = ()) -> String {
+        return NSLocalizedString("list.title", bundle: R.hostingBundle, comment: "")
       }
       
       /// Value: Spotting

@@ -9,10 +9,11 @@
 import UIKit
 
 class MainTabBarController: NITabBarController {
-    override init() {
+    init(withViewControllers controllers: [UIViewController]) {
         super.init()
-        
         delegate = self
+        
+        viewControllers = controllers
     }
 }
 
