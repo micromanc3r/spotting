@@ -35,6 +35,11 @@ extension LoginView {
         usernameField.placeholder = R.string.localizable.login_view_username_placeholder()
         passwordField.placeholder = R.string.localizable.login_view_password_placeholder()
         
+        #if DEBUG
+        usernameField.text = "dsadsad"
+        passwordField.text = "dsadsad"
+        #endif
+        
         addSubview(loginButton)
         addSubview(usernameField)
         addSubview(passwordField)

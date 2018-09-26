@@ -10,6 +10,7 @@
 		1BD1ACEA48D89C2B0A013296 /* Pods_SpottingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A903C78924E3E7400CC71B9F /* Pods_SpottingTests.framework */; };
 		6D202EFA215AD65400B96BD3 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D202EF9215AD65400B96BD3 /* SettingsViewController.swift */; };
 		6D202EFC215AD66900B96BD3 /* SpotsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D202EFB215AD66900B96BD3 /* SpotsListViewController.swift */; };
+		6D202EFE215C224400B96BD3 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D202EFD215C224400B96BD3 /* SettingsViewModel.swift */; };
 		6D2E2A9821446A5000929C57 /* LoginViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D2E2A9721446A5000929C57 /* LoginViewDelegate.swift */; };
 		6D2E2A9B21464A3C00929C57 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D2E2A9A21464A3C00929C57 /* SignupViewController.swift */; };
 		6D2E2A9D21464A5400929C57 /* SignupDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D2E2A9C21464A5400929C57 /* SignupDelegate.swift */; };
@@ -52,6 +53,7 @@
 		67E23B84392B3D57AEC5BF7E /* Pods-Spotting.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spotting.release.xcconfig"; path = "Pods/Target Support Files/Pods-Spotting/Pods-Spotting.release.xcconfig"; sourceTree = "<group>"; };
 		6D202EF9215AD65400B96BD3 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		6D202EFB215AD66900B96BD3 /* SpotsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotsListViewController.swift; sourceTree = "<group>"; };
+		6D202EFD215C224400B96BD3 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		6D2E2A9721446A5000929C57 /* LoginViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewDelegate.swift; sourceTree = "<group>"; };
 		6D2E2A9A21464A3C00929C57 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		6D2E2A9C21464A5400929C57 /* SignupDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupDelegate.swift; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				6D202EF9215AD65400B96BD3 /* SettingsViewController.swift */,
+				6D202EFD215C224400B96BD3 /* SettingsViewModel.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -526,6 +529,7 @@
 				6DCBA16C2141CF2D00B85C6F /* LoginViewModel.swift in Sources */,
 				6D2E2AA22148472000929C57 /* ForgotPasswordDelegate.swift in Sources */,
 				6DCBA1572141BD8300B85C6F /* MainCoordinator.swift in Sources */,
+				6D202EFE215C224400B96BD3 /* SettingsViewModel.swift in Sources */,
 				6DCBA1502141AE6200B85C6F /* R.generated.swift in Sources */,
 				6DCBA1632141C5E400B85C6F /* NIViewController.swift in Sources */,
 			);
