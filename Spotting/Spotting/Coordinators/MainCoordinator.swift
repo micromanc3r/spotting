@@ -46,19 +46,21 @@ extension MainCoordinator: LoginViewDelegate {
         MLogger.logVerbose(sender: self,
                            andMessage: "Login successful")
         
+        let navigationVC = UINavigationController()
         let mainVC = MainTabBarController(withViewControllers: [SpotsListViewController(), SettingsViewController()])
         guard let rootViewController = window.rootViewController else {
             return
         }
         
-        mainVC.view.frame = rootViewController.view.frame
-        mainVC.view.layoutIfNeeded()
+        navigationVC.viewControllers = [mainVC]
+        navigationVC.view.frame = rootViewController.view.frame
+        navigationVC.view.layoutIfNeeded()
         
         UIView.transition(with: window,
                           duration: 0.3,
                           options: .transitionCrossDissolve,
                           animations: {
-                            self.window.rootViewController = mainVC
+                            self.window.rootViewController = navigationVC
         },
                           completion: nil)
     }
