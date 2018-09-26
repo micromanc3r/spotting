@@ -11,6 +11,12 @@
 		6D202EFA215AD65400B96BD3 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D202EF9215AD65400B96BD3 /* SettingsViewController.swift */; };
 		6D202EFC215AD66900B96BD3 /* SpotsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D202EFB215AD66900B96BD3 /* SpotsListViewController.swift */; };
 		6D202EFE215C224400B96BD3 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D202EFD215C224400B96BD3 /* SettingsViewModel.swift */; };
+		6D202F06215C2A6100B96BD3 /* AboutAppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D202F05215C2A6100B96BD3 /* AboutAppViewController.swift */; };
+		6D202F0A215C2AFE00B96BD3 /* PrivacyPolicyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D202F09215C2AFE00B96BD3 /* PrivacyPolicyViewController.swift */; };
+		6D202F0C215C2B4400B96BD3 /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D202F0B215C2B4400B96BD3 /* ChangePasswordViewController.swift */; };
+		6D202F0E215C2B4A00B96BD3 /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D202F0D215C2B4A00B96BD3 /* HelpViewController.swift */; };
+		6D202F10215C2B5400B96BD3 /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D202F0F215C2B5400B96BD3 /* ContactViewController.swift */; };
+		6D202F12215C2B5A00B96BD3 /* LogoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D202F11215C2B5A00B96BD3 /* LogoutViewController.swift */; };
 		6D2E2A9821446A5000929C57 /* LoginViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D2E2A9721446A5000929C57 /* LoginViewDelegate.swift */; };
 		6D2E2A9B21464A3C00929C57 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D2E2A9A21464A3C00929C57 /* SignupViewController.swift */; };
 		6D2E2A9D21464A5400929C57 /* SignupDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D2E2A9C21464A5400929C57 /* SignupDelegate.swift */; };
@@ -54,6 +60,12 @@
 		6D202EF9215AD65400B96BD3 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		6D202EFB215AD66900B96BD3 /* SpotsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotsListViewController.swift; sourceTree = "<group>"; };
 		6D202EFD215C224400B96BD3 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		6D202F05215C2A6100B96BD3 /* AboutAppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutAppViewController.swift; sourceTree = "<group>"; };
+		6D202F09215C2AFE00B96BD3 /* PrivacyPolicyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrivacyPolicyViewController.swift; sourceTree = "<group>"; };
+		6D202F0B215C2B4400B96BD3 /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
+		6D202F0D215C2B4A00B96BD3 /* HelpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
+		6D202F0F215C2B5400B96BD3 /* ContactViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
+		6D202F11215C2B5A00B96BD3 /* LogoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogoutViewController.swift; sourceTree = "<group>"; };
 		6D2E2A9721446A5000929C57 /* LoginViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewDelegate.swift; sourceTree = "<group>"; };
 		6D2E2A9A21464A3C00929C57 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		6D2E2A9C21464A5400929C57 /* SignupDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupDelegate.swift; sourceTree = "<group>"; };
@@ -117,10 +129,64 @@
 		6D202EF8215AD63C00B96BD3 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				6D202EFF215C29A300B96BD3 /* ChangePassword */,
+				6D202F00215C29B200B96BD3 /* Help */,
+				6D202F01215C29BC00B96BD3 /* Contact */,
+				6D202F03215C29D800B96BD3 /* Logout */,
+				6D202F04215C2A0300B96BD3 /* PrivacyPolicy */,
+				6D202F02215C29D000B96BD3 /* AboutApp */,
 				6D202EF9215AD65400B96BD3 /* SettingsViewController.swift */,
 				6D202EFD215C224400B96BD3 /* SettingsViewModel.swift */,
 			);
 			path = Settings;
+			sourceTree = "<group>";
+		};
+		6D202EFF215C29A300B96BD3 /* ChangePassword */ = {
+			isa = PBXGroup;
+			children = (
+				6D202F0B215C2B4400B96BD3 /* ChangePasswordViewController.swift */,
+			);
+			path = ChangePassword;
+			sourceTree = "<group>";
+		};
+		6D202F00215C29B200B96BD3 /* Help */ = {
+			isa = PBXGroup;
+			children = (
+				6D202F0D215C2B4A00B96BD3 /* HelpViewController.swift */,
+			);
+			path = Help;
+			sourceTree = "<group>";
+		};
+		6D202F01215C29BC00B96BD3 /* Contact */ = {
+			isa = PBXGroup;
+			children = (
+				6D202F0F215C2B5400B96BD3 /* ContactViewController.swift */,
+			);
+			path = Contact;
+			sourceTree = "<group>";
+		};
+		6D202F02215C29D000B96BD3 /* AboutApp */ = {
+			isa = PBXGroup;
+			children = (
+				6D202F05215C2A6100B96BD3 /* AboutAppViewController.swift */,
+			);
+			path = AboutApp;
+			sourceTree = "<group>";
+		};
+		6D202F03215C29D800B96BD3 /* Logout */ = {
+			isa = PBXGroup;
+			children = (
+				6D202F11215C2B5A00B96BD3 /* LogoutViewController.swift */,
+			);
+			path = Logout;
+			sourceTree = "<group>";
+		};
+		6D202F04215C2A0300B96BD3 /* PrivacyPolicy */ = {
+			isa = PBXGroup;
+			children = (
+				6D202F09215C2AFE00B96BD3 /* PrivacyPolicyViewController.swift */,
+			);
+			path = PrivacyPolicy;
 			sourceTree = "<group>";
 		};
 		6D2E2A9921464A2300929C57 /* SignUp */ = {
@@ -513,6 +579,9 @@
 				6D202EFC215AD66900B96BD3 /* SpotsListViewController.swift in Sources */,
 				6D2E2AA0214846F300929C57 /* ForgotPasswordViewController.swift in Sources */,
 				6DCBA1552141BD5700B85C6F /* Coordinator.swift in Sources */,
+				6D202F0E215C2B4A00B96BD3 /* HelpViewController.swift in Sources */,
+				6D202F0A215C2AFE00B96BD3 /* PrivacyPolicyViewController.swift in Sources */,
+				6D202F10215C2B5400B96BD3 /* ContactViewController.swift in Sources */,
 				6D2E2A9821446A5000929C57 /* LoginViewDelegate.swift in Sources */,
 				6D202EFA215AD65400B96BD3 /* SettingsViewController.swift in Sources */,
 				6DCBA16A2141CD5700B85C6F /* NIView.swift in Sources */,
@@ -525,9 +594,12 @@
 				6D2E2A9B21464A3C00929C57 /* SignupViewController.swift in Sources */,
 				6DCBA15C2141BFC900B85C6F /* SettingsStorage.swift in Sources */,
 				6D6E058B214B8C9B00283F3A /* NITabBarController.swift in Sources */,
+				6D202F12215C2B5A00B96BD3 /* LogoutViewController.swift in Sources */,
 				6D6E058E214B8D2E00283F3A /* MainTabBarController.swift in Sources */,
 				6DCBA16C2141CF2D00B85C6F /* LoginViewModel.swift in Sources */,
+				6D202F0C215C2B4400B96BD3 /* ChangePasswordViewController.swift in Sources */,
 				6D2E2AA22148472000929C57 /* ForgotPasswordDelegate.swift in Sources */,
+				6D202F06215C2A6100B96BD3 /* AboutAppViewController.swift in Sources */,
 				6DCBA1572141BD8300B85C6F /* MainCoordinator.swift in Sources */,
 				6D202EFE215C224400B96BD3 /* SettingsViewModel.swift in Sources */,
 				6DCBA1502141AE6200B85C6F /* R.generated.swift in Sources */,
