@@ -48,14 +48,14 @@ extension MainCoordinator: LoginViewDelegate {
 
         let spotsList = SpotsListViewController()
         let settings = SettingsViewController()
-        
+
         spotsList.tabBarItem = UITabBarItem(title: spotsList.title,
                                             image: R.image.icon(),
                                             selectedImage: R.image.icon())
         settings.tabBarItem = UITabBarItem(title: settings.title,
                                            image: R.image.icon(),
                                            selectedImage: R.image.icon())
-        
+
         let mainVC = MainTabBarController(withViewControllers: [spotsList,
                                                                 settings])
         guard let rootViewController = window.rootViewController else {
@@ -63,6 +63,7 @@ extension MainCoordinator: LoginViewDelegate {
         }
 
         let navigationVC = UINavigationController()
+        navigationVC.view.backgroundColor = .white
         navigationVC.viewControllers = [mainVC]
         navigationVC.view.frame = rootViewController.view.frame
         navigationVC.view.layoutIfNeeded()

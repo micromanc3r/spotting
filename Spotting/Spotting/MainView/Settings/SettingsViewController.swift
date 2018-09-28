@@ -23,7 +23,7 @@ class SettingsViewController: NIViewController {
         super.init()
         title = R.string.localizable.settingsTitle()
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         prepareLayout()
@@ -31,8 +31,7 @@ class SettingsViewController: NIViewController {
 
     override func viewWillAppear(_: Bool) {
         if let selected = tableView.indexPathForSelectedRow {
-            tableView.deselectRow(at: selected,
-                                  animated: true)
+            tableView.deselectRow(at: selected, animated: true)
         }
     }
 }
