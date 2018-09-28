@@ -280,9 +280,9 @@
 		6D6E058C214B8D0200283F3A /* MainView */ = {
 			isa = PBXGroup;
 			children = (
+				6D6E058D214B8D2E00283F3A /* MainTabBarController.swift */,
 				6D202EF7215AD62800B96BD3 /* SpotsList */,
 				6D202EF8215AD63C00B96BD3 /* Settings */,
-				6D6E058D214B8D2E00283F3A /* MainTabBarController.swift */,
 			);
 			path = MainView;
 			sourceTree = "<group>";
