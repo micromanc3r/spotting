@@ -9,10 +9,10 @@
 import Foundation
 
 struct HelpViewModel {
-    let items = [HelpItem(title: R.string.localizable.help_spot_create_title(),
+    let items = [HelpDetail(title: R.string.localizable.help_spot_create_title(),
                           helpText: R.string.localizable.help_spot_create_message()),
-                 HelpItem(title: R.string.localizable.help_forgot_password_title(),
+                 HelpDetail(title: R.string.localizable.help_forgot_password_title(),
                           helpText: R.string.localizable.help_forgot_password_message()),
-                 HelpItem(title: R.string.localizable.help_map_pins_title(),
+                 HelpDetail(title: R.string.localizable.help_map_pins_title(),
                           helpText: R.string.localizable.help_map_pins_message())]
 }

@@ -1,5 +1,5 @@
 //
-//  HelpItem.swift
+//  HelpDetail.swift
 //  Spotting
 //
 //  Created by micromanc3r on 28/09/2018.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct HelpItem {
+struct HelpDetail {
     let title: String
     let helpText: String
 }
