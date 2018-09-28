@@ -15,7 +15,7 @@ struct ChangePasswordSettingsItem: SettingsItem {
 
     init() {
         viewController = ChangePasswordViewController()
-        title = R.string.localizable.settingsChange_password()
+        title = R.string.localizable.settings_change_password()
         icon = R.image.icon()
     }
 }

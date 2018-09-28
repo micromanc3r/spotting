@@ -11,7 +11,7 @@ import Foundation
 class SpotsListViewController: NIViewController {
     override init() {
         super.init()
-        title = R.string.localizable.listTitle()
+        title = R.string.localizable.list_title()
     }
 
     override func viewDidLoad() {

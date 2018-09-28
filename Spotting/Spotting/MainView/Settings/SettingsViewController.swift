@@ -21,7 +21,7 @@ class SettingsViewController: NIViewController {
 
     override init() {
         super.init()
-        title = R.string.localizable.settingsTitle()
+        title = R.string.localizable.settings_title()
     }
 
     override func viewDidLoad() {

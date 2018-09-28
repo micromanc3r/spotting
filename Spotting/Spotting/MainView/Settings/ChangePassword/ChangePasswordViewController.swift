@@ -24,7 +24,7 @@ class ChangePasswordViewController: NIViewController {
 
 extension ChangePasswordViewController {
     private func prepareLayout() {
-        navigationItem.title = R.string.localizable.settingsChange_password()
+        navigationItem.title = R.string.localizable.settings_change_password()
         view.backgroundColor = .white
 
         prepareOldPasswordTextField()
@@ -56,25 +56,25 @@ extension ChangePasswordViewController {
     }
 
     private func prepareOldPasswordTextField() {
-        oldPasswordTextField.placeholder = R.string.localizable.changepwdOld_password_placeholder()
+        oldPasswordTextField.placeholder = R.string.localizable.changepwd_old_password_placeholder()
 
         view.addSubview(oldPasswordTextField)
     }
 
     private func prepareNewPasswordTextField() {
-        newPasswordTextField.placeholder = R.string.localizable.changepwdNew_password_placeholder()
+        newPasswordTextField.placeholder = R.string.localizable.changepwd_new_password_placeholder()
 
         view.addSubview(newPasswordTextField)
     }
 
     private func prepareConfirmPasswordTextField() {
-        confirmPasswordTextField.placeholder = R.string.localizable.changepwdConfirm_password_placeholder()
+        confirmPasswordTextField.placeholder = R.string.localizable.changepwd_confirm_password_placeholder()
 
         view.addSubview(confirmPasswordTextField)
     }
 
     private func prepareChangePasswordButton() {
-        changePasswordButton.setTitle(R.string.localizable.changepwdChange_password_button(),
+        changePasswordButton.setTitle(R.string.localizable.changepwd_change_password_button(),
                                       for: .normal)
         changePasswordButton.setTitleColor(.black,
                                            for: .normal)

@@ -15,7 +15,7 @@ struct PrivacyPolicySettingsItem: SettingsItem {
 
     init() {
         viewController = PrivacyPolicyViewController()
-        title = R.string.localizable.settingsPrivacy_policy()
+        title = R.string.localizable.settings_privacy_policy()
         icon = R.image.icon()
     }
 }

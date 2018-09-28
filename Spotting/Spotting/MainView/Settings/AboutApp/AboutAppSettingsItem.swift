@@ -15,7 +15,7 @@ struct AboutAppSettingsItem: SettingsItem {
 
     init() {
         viewController = AboutAppViewController()
-        title = R.string.localizable.settingsAbout_app()
+        title = R.string.localizable.settings_about_app()
         icon = R.image.icon()
     }
 }

@@ -15,7 +15,7 @@ struct LogoutSettingsItem: SettingsItem {
 
     init() {
         viewController = LogoutViewController()
-        title = R.string.localizable.settingsLogout()
+        title = R.string.localizable.settings_logout()
         icon = R.image.icon()
     }
 }

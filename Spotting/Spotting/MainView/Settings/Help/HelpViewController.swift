@@ -13,6 +13,7 @@ import UIKit
 
 class HelpViewController: NIViewController {
     let helpTable = UITableView()
+    let viewModel = HelpViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,7 +30,7 @@ class HelpViewController: NIViewController {
 extension HelpViewController {
     private func prepareLayout() {
         view.backgroundColor = .white
-        title = R.string.localizable.settingsHelp()
+        title = R.string.localizable.settings_help()
 
         prepareHelpTable()
 
@@ -53,11 +54,15 @@ extension HelpViewController {
 
 extension HelpViewController: UITableViewDataSource {
     func tableView(_: UITableView, numberOfRowsInSection _: Int) -> Int {
-        return 3
+        return viewModel.items.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return tableView.dequeueReusableCell(withIdentifier: "test", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "test", for: indexPath)
+        
+        cell.textLabel?.text = viewModel.items[indexPath.row].title
+        
+        return cell
     }
 }
 

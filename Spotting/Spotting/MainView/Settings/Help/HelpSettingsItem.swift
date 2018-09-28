@@ -15,7 +15,7 @@ struct HelpSettingsItem: SettingsItem {
 
     init() {
         viewController = HelpViewController()
-        title = R.string.localizable.settingsHelp()
+        title = R.string.localizable.settings_help()
         icon = R.image.icon()
     }
 }

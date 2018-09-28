@@ -15,7 +15,7 @@ struct ContactSettingsItem: SettingsItem {
 
     init() {
         viewController = ContactViewController()
-        title = R.string.localizable.settingsContact()
+        title = R.string.localizable.settings_contact()
         icon = R.image.icon()
     }
 }
