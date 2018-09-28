@@ -28,3 +28,7 @@
 "settings.logout" = "Logout";
 "settings.privacy_policy" = "Privacy policy";
 "settings.about_app" = "About app";
+"changepwd.old_password_placeholder" = "Current password";
+"changepwd.new_password_placeholder" = "New password";
+"changepwd.confirm_password_placeholder" = "Confirm new password";
+"changepwd.change_password_button" = "Change password";
