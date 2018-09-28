@@ -46,13 +46,23 @@ extension MainCoordinator: LoginViewDelegate {
         MLogger.logVerbose(sender: self,
                            andMessage: "Login successful")
 
-        let navigationVC = UINavigationController()
-        let mainVC = MainTabBarController(withViewControllers: [SpotsListViewController(),
-                                                                SettingsViewController()])
+        let spotsList = SpotsListViewController()
+        let settings = SettingsViewController()
+        
+        spotsList.tabBarItem = UITabBarItem(title: spotsList.title,
+                                            image: R.image.icon(),
+                                            selectedImage: R.image.icon())
+        settings.tabBarItem = UITabBarItem(title: settings.title,
+                                           image: R.image.icon(),
+                                           selectedImage: R.image.icon())
+        
+        let mainVC = MainTabBarController(withViewControllers: [spotsList,
+                                                                settings])
         guard let rootViewController = window.rootViewController else {
             return
         }
 
+        let navigationVC = UINavigationController()
         navigationVC.viewControllers = [mainVC]
         navigationVC.view.frame = rootViewController.view.frame
         navigationVC.view.layoutIfNeeded()

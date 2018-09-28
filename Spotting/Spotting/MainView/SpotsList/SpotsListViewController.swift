@@ -9,6 +9,12 @@
 import Foundation
 
 class SpotsListViewController: NIViewController {
+    
+    override init() {
+        super.init()
+        title = R.string.localizable.listTitle()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         prepareLayout()
@@ -17,7 +23,6 @@ class SpotsListViewController: NIViewController {
 
 extension SpotsListViewController {
     private func prepareLayout() {
-        title = R.string.localizable.listTitle()
         view.backgroundColor = .white
     }
 }

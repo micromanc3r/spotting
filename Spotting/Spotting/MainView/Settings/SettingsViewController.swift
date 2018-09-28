@@ -19,6 +19,11 @@ class SettingsViewController: NIViewController {
                                                   PrivacyPolicySettingsItem(),
                                                   AboutAppSettingsItem()])
 
+    override init() {
+        super.init()
+        title = R.string.localizable.settingsTitle()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         prepareLayout()
@@ -34,7 +39,6 @@ class SettingsViewController: NIViewController {
 
 extension SettingsViewController {
     private func prepareLayout() {
-        title = R.string.localizable.settingsTitle()
         view.backgroundColor = .white
 
         prepareScrollView()
