@@ -18,6 +18,6 @@ class AboutAppViewController: NIViewController {
 
 extension AboutAppViewController {
     private func prepareLayout() {
-        
+        view.backgroundColor = .red
     }
 }

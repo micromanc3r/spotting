@@ -18,6 +18,6 @@ class ChangePasswordViewController: NIViewController {
 
 extension ChangePasswordViewController {
     private func prepareLayout() {
-        
+        view.backgroundColor = .white
     }
 }

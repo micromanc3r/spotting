@@ -18,6 +18,6 @@ class ContactViewController: NIViewController {
 
 extension ContactViewController {
     private func prepareLayout() {
-        
+        view.backgroundColor = .gray
     }
 }

@@ -18,6 +18,6 @@ class PrivacyPolicyViewController: NIViewController {
 
 extension PrivacyPolicyViewController {
     private func prepareLayout() {
-        
+        view.backgroundColor = .yellow
     }
 }

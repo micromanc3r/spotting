@@ -18,6 +18,6 @@ class HelpViewController: NIViewController {
 
 extension HelpViewController {
     private func prepareLayout() {
-        
+        view.backgroundColor = .green
     }
 }

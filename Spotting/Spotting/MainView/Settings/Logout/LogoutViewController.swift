@@ -18,6 +18,6 @@ class LogoutViewController: NIViewController {
 
 extension LogoutViewController {
     private func prepareLayout() {
-        
+        view.backgroundColor = .blue
     }
 }

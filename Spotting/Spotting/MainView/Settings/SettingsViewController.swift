@@ -23,6 +23,13 @@ class SettingsViewController: NIViewController {
         super.viewDidLoad()
         prepareLayout()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        if let selected = tableView.indexPathForSelectedRow {
+            tableView.deselectRow(at: selected,
+                                  animated: true)
+        }
+    }
 }
 
 extension SettingsViewController {
@@ -48,7 +55,7 @@ extension SettingsViewController {
     }
 }
 
-extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
+extension SettingsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.settingsItems.count
     }
@@ -57,5 +64,13 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "test", for: indexPath)
         cell.textLabel?.text = viewModel.settingsItems[indexPath.row].title
         return cell
+    }
+}
+
+extension SettingsViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let targetVC = viewModel.settingsItems[indexPath.row].viewController
+        navigationController?.pushViewController(targetVC,
+                                                 animated: true)
     }
 }
