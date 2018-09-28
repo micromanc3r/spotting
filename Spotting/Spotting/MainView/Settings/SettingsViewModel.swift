@@ -10,7 +10,7 @@ import Foundation
 
 class SettingsViewModel {
     let settingsItems: [SettingsItem]
-    
+
     init(withItems settingsItems: [SettingsItem]) {
         self.settingsItems = settingsItems
     }

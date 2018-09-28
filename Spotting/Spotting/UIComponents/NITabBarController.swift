@@ -13,7 +13,7 @@ class NITabBarController: UITabBarController {
     required init?(coder _: NSCoder) {
         fatalError("Unavailable")
     }
-    
+
     init() {
         super.init(nibName: nil, bundle: nil)
     }

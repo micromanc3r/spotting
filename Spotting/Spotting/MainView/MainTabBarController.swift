@@ -12,10 +12,9 @@ class MainTabBarController: NITabBarController {
     init(withViewControllers controllers: [UIViewController]) {
         super.init()
         delegate = self
-        
+
         viewControllers = controllers
     }
 }
 
-extension MainTabBarController: UITabBarControllerDelegate {
-}
+extension MainTabBarController: UITabBarControllerDelegate {}

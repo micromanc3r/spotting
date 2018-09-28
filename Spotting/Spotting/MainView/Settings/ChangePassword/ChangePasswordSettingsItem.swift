@@ -14,8 +14,8 @@ struct ChangePasswordSettingsItem: SettingsItem {
     var icon: UIImage?
 
     init() {
-        self.viewController = ChangePasswordViewController()
-        self.title = R.string.localizable.settingsChange_password()
-        self.icon = R.image.icon()
+        viewController = ChangePasswordViewController()
+        title = R.string.localizable.settingsChange_password()
+        icon = R.image.icon()
     }
 }

@@ -12,7 +12,7 @@ struct LogoutSettingsItem: SettingsItem {
     var viewController: UIViewController
     var title: String
     var icon: UIImage?
-    
+
     init() {
         viewController = LogoutViewController()
         title = R.string.localizable.settingsLogout()

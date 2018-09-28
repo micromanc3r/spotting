@@ -12,7 +12,7 @@ struct AboutAppSettingsItem: SettingsItem {
     var viewController: UIViewController
     var title: String
     var icon: UIImage?
-    
+
     init() {
         viewController = AboutAppViewController()
         title = R.string.localizable.settingsAbout_app()

@@ -8,6 +8,4 @@
 
 import Foundation
 
-protocol ForgotPasswordDelegate: class {
-    
-}
+protocol ForgotPasswordDelegate: class {}

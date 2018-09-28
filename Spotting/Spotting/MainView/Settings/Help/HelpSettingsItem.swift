@@ -12,7 +12,7 @@ struct HelpSettingsItem: SettingsItem {
     var viewController: UIViewController
     var title: String
     var icon: UIImage?
-    
+
     init() {
         viewController = HelpViewController()
         title = R.string.localizable.settingsHelp()

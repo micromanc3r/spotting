@@ -9,7 +9,7 @@
 import UIKit
 
 protocol SettingsItem {
-    var viewController: UIViewController {get}
-    var title: String {get}
-    var icon: UIImage? {get}
+    var viewController: UIViewController { get }
+    var title: String { get }
+    var icon: UIImage? { get }
 }

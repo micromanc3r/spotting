@@ -45,27 +45,27 @@ extension MainCoordinator: LoginViewDelegate {
     func loginSuccessful() {
         MLogger.logVerbose(sender: self,
                            andMessage: "Login successful")
-        
+
         let navigationVC = UINavigationController()
         let mainVC = MainTabBarController(withViewControllers: [SpotsListViewController(),
                                                                 SettingsViewController()])
         guard let rootViewController = window.rootViewController else {
             return
         }
-        
+
         navigationVC.viewControllers = [mainVC]
         navigationVC.view.frame = rootViewController.view.frame
         navigationVC.view.layoutIfNeeded()
-        
+
         UIView.transition(with: window,
                           duration: 0.3,
                           options: .transitionCrossDissolve,
                           animations: {
-                            self.window.rootViewController = navigationVC
-        },
+                              self.window.rootViewController = navigationVC
+                          },
                           completion: nil)
     }
-    
+
     func newUserSignUp() {
         MLogger.logVerbose(sender: self,
                            andMessage: "Go to sign up")
@@ -73,7 +73,7 @@ extension MainCoordinator: LoginViewDelegate {
         navigationController.pushViewController(signupVC,
                                                 animated: true)
     }
-    
+
     func retrieveForgottenPassword() {
         MLogger.logVerbose(sender: self,
                            andMessage: "Retrieve password")
@@ -83,10 +83,6 @@ extension MainCoordinator: LoginViewDelegate {
     }
 }
 
-extension MainCoordinator: SignupDelegate {
-    
-}
+extension MainCoordinator: SignupDelegate {}
 
-extension MainCoordinator: ForgotPasswordDelegate {
-    
-}
+extension MainCoordinator: ForgotPasswordDelegate {}

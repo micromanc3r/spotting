@@ -8,6 +8,4 @@
 
 import Foundation
 
-protocol SignupDelegate: class {
-    
-}
+protocol SignupDelegate: class {}

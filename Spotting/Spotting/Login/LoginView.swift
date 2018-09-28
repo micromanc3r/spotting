@@ -6,9 +6,9 @@
 //  Copyright © 2018 micromanc3r. All rights reserved.
 //
 
+import Cartography
 import MicroLogger
 import UIKit
-import Cartography
 
 class LoginView: NIView {
     let loginButton = UIButton()
@@ -31,19 +31,19 @@ extension LoginView {
         loginButton.addTarget(self,
                               action: #selector(loginButtonPressed),
                               for: .touchUpInside)
-        
+
         usernameField.placeholder = R.string.localizable.login_view_username_placeholder()
         passwordField.placeholder = R.string.localizable.login_view_password_placeholder()
-        
+
         #if DEBUG
-        usernameField.text = "dsadsad"
-        passwordField.text = "dsadsad"
+            usernameField.text = "dsadsad"
+            passwordField.text = "dsadsad"
         #endif
-        
+
         addSubview(loginButton)
         addSubview(usernameField)
         addSubview(passwordField)
-        
+
         constrain(loginButton,
                   usernameField,
                   passwordField,
@@ -51,11 +51,11 @@ extension LoginView {
             usernameField.top == superview.top + 8
             usernameField.left == superview.left + 8
             usernameField.right == superview.right - 8
-            
+
             passwordField.top == usernameField.bottom + 8
             passwordField.left == superview.left + 8
             passwordField.right == superview.right - 8
-            
+
             loginButton.top == passwordField.bottom + 24
             loginButton.centerX == superview.centerX
             loginButton.left >= superview.left + 8
@@ -69,44 +69,44 @@ extension LoginView {
     @objc private func loginButtonPressed() {
         let usernameOk = validateUsername()
         let passwordOk = validatePassword()
-        
+
         guard usernameOk && passwordOk else {
             // show error
             MLogger.logError(sender: self,
                              andMessage: "username or password text nok")
             return
         }
-        
+
         loginAction(LoginCredentials(username: usernameField.text!,
                                      password: passwordField.text!))
     }
-    
+
     private func validateUsername() -> Bool {
         guard let username = usernameField.text else {
             usernameField.showError()
             return false
         }
-        
+
         guard username.count >= 3 else {
             usernameField.showError()
             return false
         }
-        
+
         usernameField.hideError()
         return true
     }
-    
+
     private func validatePassword() -> Bool {
         guard let password = passwordField.text else {
             passwordField.showError()
             return false
         }
-        
+
         guard password.count >= 3 else {
             passwordField.showError()
             return false
         }
-        
+
         passwordField.hideError()
         return true
     }

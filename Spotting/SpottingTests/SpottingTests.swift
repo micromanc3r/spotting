@@ -39,36 +39,36 @@ class LoginViewTests: XCTestCase {
         XCTAssertNil(loginView.passwordField.backgroundColor)
         XCTAssertEqual(loginView.usernameField.backgroundColor, .red)
     }
-    
+
     func testInvalidPassword() {
         let loginView = LoginView { credentials in
             XCTAssertFalse(credentials.username.isEmpty)
             XCTAssertFalse(credentials.password.isEmpty)
         }
-        
+
         loginView.passwordField.text = "ip" // invalid password
         loginView.usernameField.text = "validUsername"
-        
+
         loginView.loginButton.sendActions(for: .touchUpInside)
-        
+
         XCTAssertEqual(loginView.passwordField.backgroundColor, .red)
         XCTAssertNil(loginView.usernameField.backgroundColor)
     }
-    
+
     func testHappyCase() {
         let loginView = LoginView { credentials in
             XCTAssertFalse(credentials.username.isEmpty)
             XCTAssertFalse(credentials.password.isEmpty)
-            
+
             XCTAssertEqual(credentials.username, "validUsername")
             XCTAssertEqual(credentials.password, "validPassword")
         }
-        
+
         loginView.passwordField.text = "validPassword"
         loginView.usernameField.text = "validUsername"
-        
+
         loginView.loginButton.sendActions(for: .touchUpInside)
-        
+
         XCTAssertNil(loginView.passwordField.backgroundColor)
         XCTAssertNil(loginView.usernameField.backgroundColor)
     }
