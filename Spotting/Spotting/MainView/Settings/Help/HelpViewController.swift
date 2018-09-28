@@ -59,16 +59,16 @@ extension HelpViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "test", for: indexPath)
-        
+
         cell.textLabel?.text = viewModel.items[indexPath.row].title
-        
+
         return cell
     }
 }
 
 extension HelpViewController: UITableViewDelegate {
-    func tableView(_: UITableView, didSelectRowAt _: IndexPath) {
-        MLogger.logVerbose(sender: self,
-                           andMessage: "Help item selected")
+    func tableView(_: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let detailViewController = HelpDetailViewController(withDetail: viewModel.items[indexPath.row])
+        navigationController?.pushViewController(detailViewController, animated: true)
     }
 }
