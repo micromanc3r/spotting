@@ -47,7 +47,8 @@ extension MainCoordinator: LoginViewDelegate {
                            andMessage: "Login successful")
         
         let navigationVC = UINavigationController()
-        let mainVC = MainTabBarController(withViewControllers: [SpotsListViewController(), SettingsViewController()])
+        let mainVC = MainTabBarController(withViewControllers: [SpotsListViewController(),
+                                                                SettingsViewController()])
         guard let rootViewController = window.rootViewController else {
             return
         }

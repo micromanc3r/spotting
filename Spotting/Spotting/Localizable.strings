@@ -22,3 +22,9 @@
 "forgotpswd_email" = "E-mail";
 "list.title" = "Spots";
 "settings.title" = "Settings";
+"settings.change_password" = "Change password";
+"settings.help" = "Help";
+"settings.contact" = "Contact";
+"settings.logout" = "Logout";
+"settings.privacy_policy" = "Privacy policy";
+"settings.about_app" = "About app";

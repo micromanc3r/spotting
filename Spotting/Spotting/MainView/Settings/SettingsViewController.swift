@@ -12,8 +12,12 @@ import Cartography
 
 class SettingsViewController: NIViewController {
     let tableView = UITableView()
-    
-    let viewModel = SettingsViewModel()
+    let viewModel = SettingsViewModel(withItems: [ChangePasswordSettingsItem(),
+                                                  HelpSettingsItem(),
+                                                  ContactSettingsItem(),
+                                                  LogoutSettingsItem(),
+                                                  PrivacyPolicySettingsItem(),
+                                                  AboutAppSettingsItem()])
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,10 +50,12 @@ extension SettingsViewController {
 
 extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return viewModel.settingsItems.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return tableView.dequeueReusableCell(withIdentifier: "test", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "test", for: indexPath)
+        cell.textLabel?.text = viewModel.settingsItems[indexPath.row].title
+        return cell
     }
 }

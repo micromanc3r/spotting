@@ -31,8 +31,16 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.image` struct is generated, and contains static references to 0 images.
+  /// This `R.image` struct is generated, and contains static references to 1 images.
   struct image {
+    /// Image `icon`.
+    static let icon = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon")
+    
+    /// `UIImage(named: "icon", bundle: ..., traitCollection: ...)`
+    static func icon(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.icon, compatibleWith: traitCollection)
+    }
+    
     fileprivate init() {}
   }
   
@@ -66,22 +74,34 @@ struct R: Rswift.Validatable {
   
   /// This `R.string` struct is generated, and contains static references to 1 localization tables.
   struct string {
-    /// This `R.string.localizable` struct is generated, and contains static references to 16 localization keys.
+    /// This `R.string.localizable` struct is generated, and contains static references to 22 localization keys.
     struct localizable {
+      /// Value: About app
+      static let settingsAbout_app = Rswift.StringResource(key: "settings.about_app", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Change password
+      static let settingsChange_password = Rswift.StringResource(key: "settings.change_password", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Confirm password
       static let signup_confirm_password = Rswift.StringResource(key: "signup_confirm_password", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Contact
+      static let settingsContact = Rswift.StringResource(key: "settings.contact", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: E-mail
       static let forgotpswd_email = Rswift.StringResource(key: "forgotpswd_email", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: E-mail
       static let signup_email = Rswift.StringResource(key: "signup_email", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Forgot password?
       static let login_forgot_button = Rswift.StringResource(key: "login_forgot_button", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Help
+      static let settingsHelp = Rswift.StringResource(key: "settings.help", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Login
       static let login_view_button_title = Rswift.StringResource(key: "login_view_button_title", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Logout
+      static let settingsLogout = Rswift.StringResource(key: "settings.logout", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Password
       static let login_view_password_placeholder = Rswift.StringResource(key: "login_view_password_placeholder", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Password
       static let signup_password = Rswift.StringResource(key: "signup_password", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Privacy policy
+      static let settingsPrivacy_policy = Rswift.StringResource(key: "settings.privacy_policy", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Send email
       static let forgotpswd_send_email = Rswift.StringResource(key: "forgotpswd_send_email", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Settings
@@ -101,9 +121,24 @@ struct R: Rswift.Validatable {
       /// Value: Username
       static let signup_username = Rswift.StringResource(key: "signup_username", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       
+      /// Value: About app
+      static func settingsAbout_app(_: Void = ()) -> String {
+        return NSLocalizedString("settings.about_app", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// Value: Change password
+      static func settingsChange_password(_: Void = ()) -> String {
+        return NSLocalizedString("settings.change_password", bundle: R.hostingBundle, comment: "")
+      }
+      
       /// Value: Confirm password
       static func signup_confirm_password(_: Void = ()) -> String {
         return NSLocalizedString("signup_confirm_password", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// Value: Contact
+      static func settingsContact(_: Void = ()) -> String {
+        return NSLocalizedString("settings.contact", bundle: R.hostingBundle, comment: "")
       }
       
       /// Value: E-mail
@@ -121,9 +156,19 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("login_forgot_button", bundle: R.hostingBundle, comment: "")
       }
       
+      /// Value: Help
+      static func settingsHelp(_: Void = ()) -> String {
+        return NSLocalizedString("settings.help", bundle: R.hostingBundle, comment: "")
+      }
+      
       /// Value: Login
       static func login_view_button_title(_: Void = ()) -> String {
         return NSLocalizedString("login_view_button_title", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// Value: Logout
+      static func settingsLogout(_: Void = ()) -> String {
+        return NSLocalizedString("settings.logout", bundle: R.hostingBundle, comment: "")
       }
       
       /// Value: Password
@@ -134,6 +179,11 @@ struct R: Rswift.Validatable {
       /// Value: Password
       static func signup_password(_: Void = ()) -> String {
         return NSLocalizedString("signup_password", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// Value: Privacy policy
+      static func settingsPrivacy_policy(_: Void = ()) -> String {
+        return NSLocalizedString("settings.privacy_policy", bundle: R.hostingBundle, comment: "")
       }
       
       /// Value: Send email
