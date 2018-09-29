@@ -73,10 +73,10 @@ extension SettingsViewController: UITableViewDataSource {
 extension SettingsViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch viewModel.settingsItems[indexPath.row].type {
-        case .viewController(let targetVC):
+        case let .viewController(targetVC):
             navigationController?.pushViewController(targetVC,
                                                      animated: true)
-        case .action(let action):
+        case let .action(action):
             tableView.deselectRow(at: indexPath, animated: true)
             action()
         }

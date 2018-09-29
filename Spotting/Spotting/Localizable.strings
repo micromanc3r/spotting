@@ -38,3 +38,7 @@
 "help_forgot_password_message" = "Too bad...";
 "help_map_pins_title" = "What do the map pins mean?";
 "help_map_pins_message" = "Spots...";
+"help_contact_cantsendemail_title" = "E-mail cannot be sent.";
+"help_contact_cantsendemail_Button" = "OK";
+"help_contact_emailsent_title" = "E-mail sent successfuly.";
+"help_contact_emailsent_Button" = "OK";

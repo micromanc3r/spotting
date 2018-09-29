@@ -14,11 +14,16 @@ struct ContactSettingsItem: SettingsItem {
     var title: String
     var icon: UIImage?
 
+    private let emailSender: EmailSender
+
     init() {
+        let sender = EmailSender()
         type = .action({
-            MLogger.logVerbose(sender: ContactSettingsItem.self, andMessage: "Contact")
+            sender.sendEmail(to: Constants.Email.toEmail,
+                             withSubject: Constants.Email.subject)
         })
         title = R.string.localizable.settings_contact()
         icon = R.image.icon()
+        emailSender = sender
     }
 }
