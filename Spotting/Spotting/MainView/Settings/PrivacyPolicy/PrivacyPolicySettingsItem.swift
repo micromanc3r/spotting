@@ -9,12 +9,12 @@
 import UIKit
 
 struct PrivacyPolicySettingsItem: SettingsItem {
-    var viewController: UIViewController
+    var type: SettingsType
     var title: String
     var icon: UIImage?
 
     init() {
-        viewController = PrivacyPolicyViewController()
+        type = .viewController(PrivacyPolicyViewController())
         title = R.string.localizable.settings_privacy_policy()
         icon = R.image.icon()
     }

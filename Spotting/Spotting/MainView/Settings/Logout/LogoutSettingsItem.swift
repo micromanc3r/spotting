@@ -6,15 +6,18 @@
 //  Copyright © 2018 micromanc3r. All rights reserved.
 //
 
+import MicroLogger
 import UIKit
 
 struct LogoutSettingsItem: SettingsItem {
-    var viewController: UIViewController
+    var type: SettingsType
     var title: String
     var icon: UIImage?
 
     init() {
-        viewController = LogoutViewController()
+        type = .action({
+            MLogger.logVerbose(sender: LogoutSettingsItem.self, andMessage: "Logout")
+        })
         title = R.string.localizable.settings_logout()
         icon = R.image.icon()
     }

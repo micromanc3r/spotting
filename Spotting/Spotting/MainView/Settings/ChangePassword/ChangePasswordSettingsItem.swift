@@ -9,12 +9,12 @@
 import UIKit
 
 struct ChangePasswordSettingsItem: SettingsItem {
-    var viewController: UIViewController
+    var type: SettingsType
     var title: String
     var icon: UIImage?
 
     init() {
-        viewController = ChangePasswordViewController()
+        type = .viewController(ChangePasswordViewController())
         title = R.string.localizable.settings_change_password()
         icon = R.image.icon()
     }

@@ -9,12 +9,12 @@
 import UIKit
 
 struct AboutAppSettingsItem: SettingsItem {
-    var viewController: UIViewController
+    var type: SettingsType
     var title: String
     var icon: UIImage?
 
     init() {
-        viewController = AboutAppViewController()
+        type = .viewController(AboutAppViewController())
         title = R.string.localizable.settings_about_app()
         icon = R.image.icon()
     }

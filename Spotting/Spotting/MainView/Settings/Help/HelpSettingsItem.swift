@@ -9,12 +9,12 @@
 import UIKit
 
 struct HelpSettingsItem: SettingsItem {
-    var viewController: UIViewController
+    var type: SettingsType
     var title: String
     var icon: UIImage?
 
     init() {
-        viewController = HelpViewController()
+        type = .viewController(HelpViewController())
         title = R.string.localizable.settings_help()
         icon = R.image.icon()
     }

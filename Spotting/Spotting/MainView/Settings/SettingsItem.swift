@@ -9,7 +9,12 @@
 import UIKit
 
 protocol SettingsItem {
-    var viewController: UIViewController { get }
+    var type: SettingsType { get }
     var title: String { get }
     var icon: UIImage? { get }
+}
+
+enum SettingsType {
+    case viewController(UIViewController)
+    case action(() -> Void)
 }
