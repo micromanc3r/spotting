@@ -74,10 +74,12 @@ struct R: Rswift.Validatable {
 
     /// This `R.string` struct is generated, and contains static references to 1 localization tables.
     struct string {
-        /// This `R.string.localizable` struct is generated, and contains static references to 36 localization keys.
+        /// This `R.string.localizable` struct is generated, and contains static references to 39 localization keys.
         struct localizable {
             /// Value: About app
             static let settings_about_app = Rswift.StringResource(key: "settings_about_app", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+            /// Value: Author: Milan Jiříček & Miroslav Sliacky
+            static let aboutapp_author = Rswift.StringResource(key: "aboutapp_author", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
             /// Value: Change password
             static let changepwd_change_password_button = Rswift.StringResource(key: "changepwd_change_password_button", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
             /// Value: Change password
@@ -137,6 +139,8 @@ struct R: Rswift.Validatable {
             /// Value: Spots...
             static let help_map_pins_message = Rswift.StringResource(key: "help_map_pins_message", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
             /// Value: Spotting
+            static let aboutapp_title = Rswift.StringResource(key: "aboutapp_title", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+            /// Value: Spotting
             static let login_title = Rswift.StringResource(key: "login_title", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
             /// Value: Too bad...
             static let help_forgot_password_message = Rswift.StringResource(key: "help_forgot_password_message", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
@@ -146,12 +150,19 @@ struct R: Rswift.Validatable {
             static let login_view_username_placeholder = Rswift.StringResource(key: "login_view_username_placeholder", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
             /// Value: Username
             static let signup_username = Rswift.StringResource(key: "signup_username", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+            /// Value: Version
+            static let aboutapp_version = Rswift.StringResource(key: "aboutapp_version", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
             /// Value: What do the map pins mean?
             static let help_map_pins_title = Rswift.StringResource(key: "help_map_pins_title", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
 
             /// Value: About app
             static func settings_about_app(_: Void = ()) -> String {
                 return NSLocalizedString("settings_about_app", bundle: R.hostingBundle, comment: "")
+            }
+
+            /// Value: Author: Milan Jiříček & Miroslav Sliacky
+            static func aboutapp_author(_: Void = ()) -> String {
+                return NSLocalizedString("aboutapp_author", bundle: R.hostingBundle, comment: "")
             }
 
             /// Value: Change password
@@ -300,6 +311,11 @@ struct R: Rswift.Validatable {
             }
 
             /// Value: Spotting
+            static func aboutapp_title(_: Void = ()) -> String {
+                return NSLocalizedString("aboutapp_title", bundle: R.hostingBundle, comment: "")
+            }
+
+            /// Value: Spotting
             static func login_title(_: Void = ()) -> String {
                 return NSLocalizedString("login_title", bundle: R.hostingBundle, comment: "")
             }
@@ -322,6 +338,11 @@ struct R: Rswift.Validatable {
             /// Value: Username
             static func signup_username(_: Void = ()) -> String {
                 return NSLocalizedString("signup_username", bundle: R.hostingBundle, comment: "")
+            }
+
+            /// Value: Version
+            static func aboutapp_version(_: Void = ()) -> String {
+                return NSLocalizedString("aboutapp_version", bundle: R.hostingBundle, comment: "")
             }
 
             /// Value: What do the map pins mean?

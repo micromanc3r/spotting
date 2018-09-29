@@ -42,3 +42,6 @@
 "help_contact_cantsendemail_Button" = "OK";
 "help_contact_emailsent_title" = "E-mail sent successfuly.";
 "help_contact_emailsent_Button" = "OK";
+"aboutapp_title" = "Spotting";
+"aboutapp_author" = "Author: Milan Jiříček & Miroslav Sliacky";
+"aboutapp_version" = "Version";
