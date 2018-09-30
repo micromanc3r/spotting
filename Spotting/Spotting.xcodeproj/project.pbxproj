@@ -50,6 +50,8 @@
 		6D202F572160BA4300B96BD3 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D202F562160BA4300B96BD3 /* CoreImage.framework */; };
 		6D202F592160BA4D00B96BD3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D202F582160BA4D00B96BD3 /* CoreGraphics.framework */; };
 		6D202F5B2160BA5600B96BD3 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D202F5A2160BA5600B96BD3 /* CoreData.framework */; };
+		6D202F5D2160BEA200B96BD3 /* GooglePlaces.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D202F5C2160BEA200B96BD3 /* GooglePlaces.framework */; };
+		6D202F5F2160BEC600B96BD3 /* GooglePlaces.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 6D202F5E2160BEC600B96BD3 /* GooglePlaces.bundle */; };
 		6D2E2A9821446A5000929C57 /* LoginViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D2E2A9721446A5000929C57 /* LoginViewDelegate.swift */; };
 		6D2E2A9B21464A3C00929C57 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D2E2A9A21464A3C00929C57 /* SignupViewController.swift */; };
 		6D2E2A9D21464A5400929C57 /* SignupDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D2E2A9C21464A5400929C57 /* SignupDelegate.swift */; };
@@ -132,6 +134,8 @@
 		6D202F562160BA4300B96BD3 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
 		6D202F582160BA4D00B96BD3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		6D202F5A2160BA5600B96BD3 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		6D202F5C2160BEA200B96BD3 /* GooglePlaces.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GooglePlaces.framework; sourceTree = "<group>"; };
+		6D202F5E2160BEC600B96BD3 /* GooglePlaces.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GooglePlaces.bundle; path = GooglePlaces.framework/Resources/GooglePlaces.bundle; sourceTree = "<group>"; };
 		6D2E2A9721446A5000929C57 /* LoginViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewDelegate.swift; sourceTree = "<group>"; };
 		6D2E2A9A21464A3C00929C57 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		6D2E2A9C21464A5400929C57 /* SignupDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupDelegate.swift; sourceTree = "<group>"; };
@@ -188,6 +192,7 @@
 				6D202F3B2160B8FA00B96BD3 /* GoogleMapsBase.framework in Frameworks */,
 				6D202F392160B8DF00B96BD3 /* GoogleMapsCore.framework in Frameworks */,
 				D15730E2A90B9C20CE0570EB /* Pods_Spotting.framework in Frameworks */,
+				6D202F5D2160BEA200B96BD3 /* GooglePlaces.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -469,6 +474,8 @@
 				6D202F3A2160B8FA00B96BD3 /* GoogleMapsBase.framework */,
 				6D202F362160B8DB00B96BD3 /* GoogleMaps.framework */,
 				6D202F372160B8DE00B96BD3 /* GoogleMapsCore.framework */,
+				6D202F5E2160BEC600B96BD3 /* GooglePlaces.bundle */,
+				6D202F5C2160BEA200B96BD3 /* GooglePlaces.framework */,
 				6648CDB6CC8CCE51D9EC9882 /* Pods_Spotting.framework */,
 				A903C78924E3E7400CC71B9F /* Pods_SpottingTests.framework */,
 			);
@@ -570,6 +577,7 @@
 				6DCBA1662141C7CB00B85C6F /* Localizable.strings in Resources */,
 				6D4E253E2141A8FD006FD4B2 /* Assets.xcassets in Resources */,
 				6D202F3D2160B99000B96BD3 /* GoogleMaps.bundle in Resources */,
+				6D202F5F2160BEC600B96BD3 /* GooglePlaces.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -613,7 +621,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/SwiftFormat/CommandLineTool/swiftformat\" --commas inline --exclude \"${SRCROOT}\"/Pods/ \"${SRCROOT}\"\n";
+			shellScript = "#\"${PODS_ROOT}/SwiftFormat/CommandLineTool/swiftformat\" --commas inline --exclude \"${SRCROOT}\"/Pods/ \"${SRCROOT}\"\n";
 		};
 		6DCBA14B2141AD5D00B85C6F /* Run Script - R.swift */ = {
 			isa = PBXShellScriptBuildPhase;

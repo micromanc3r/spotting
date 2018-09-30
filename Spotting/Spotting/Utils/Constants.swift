@@ -15,6 +15,7 @@ struct Constants {
     }
 
     struct GoogleAPI {
-        static let apiKey = "AIzaSyDSL93p7E1FCCdTK8w0jN-gyDxR27qFjzQ"
+        static let mapsApiKey = "AIzaSyDSL93p7E1FCCdTK8w0jN-gyDxR27qFjzQ"
+        static let placesApiKey = "AIzaSyDzHrIbfQvJWB-TtsZ2SGc9SZNnbvj7FwA"
     }
 }

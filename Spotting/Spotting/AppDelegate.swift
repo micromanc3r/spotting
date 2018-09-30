@@ -7,6 +7,7 @@
 //
 
 import GoogleMaps
+import GooglePlaces
 import MicroLogger
 import UIKit
 
@@ -38,6 +39,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     private func setUpGoogleMaps() {
-        GMSServices.provideAPIKey(Constants.GoogleAPI.apiKey)
+        GMSServices.provideAPIKey(Constants.GoogleAPI.mapsApiKey)
+        GMSPlacesClient.provideAPIKey(Constants.GoogleAPI.placesApiKey)
     }
 }
