@@ -13,7 +13,7 @@ class NITableView: UITableView {
     required init?(coder _: NSCoder) {
         fatalError("Unavailable")
     }
-    
+
     init() {
         super.init(frame: .zero, style: .plain)
     }
