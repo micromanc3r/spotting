@@ -47,16 +47,21 @@ extension MainCoordinator: LoginViewDelegate {
                            andMessage: "Login successful")
 
         let spotsList = SpotsListViewController()
+        let map = MapViewController()
         let settings = SettingsViewController()
 
         spotsList.tabBarItem = UITabBarItem(title: spotsList.title,
                                             image: R.image.icon(),
                                             selectedImage: R.image.icon())
+        map.tabBarItem = UITabBarItem(title: map.title,
+                                      image: R.image.icon(),
+                                      selectedImage: R.image.icon())
         settings.tabBarItem = UITabBarItem(title: settings.title,
                                            image: R.image.icon(),
                                            selectedImage: R.image.icon())
 
         let mainVC = MainTabBarController(withViewControllers: [spotsList,
+                                                                map,
                                                                 settings])
         guard let rootViewController = window.rootViewController else {
             return

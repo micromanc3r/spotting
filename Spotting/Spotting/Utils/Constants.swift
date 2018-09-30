@@ -13,4 +13,8 @@ struct Constants {
         static let toEmail = "micromanc3r@gmail.com"
         static let subject = "Spotting feedback"
     }
+
+    struct GoogleAPI {
+        static let apiKey = "AIzaSyDSL93p7E1FCCdTK8w0jN-gyDxR27qFjzQ"
+    }
 }

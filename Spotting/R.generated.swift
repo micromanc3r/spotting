@@ -21,8 +21,17 @@ struct R: Rswift.Validatable {
         fileprivate init() {}
     }
 
-    /// This `R.file` struct is generated, and contains static references to 0 files.
+    /// This `R.file` struct is generated, and contains static references to 1 files.
     struct file {
+        /// Resource file `GoogleMaps.bundle`.
+        static let googleMapsBundle = Rswift.FileResource(bundle: R.hostingBundle, name: "GoogleMaps", pathExtension: "bundle")
+
+        /// `bundle.url(forResource: "GoogleMaps", withExtension: "bundle")`
+        static func googleMapsBundle(_: Void = ()) -> Foundation.URL? {
+            let fileResource = R.file.googleMapsBundle
+            return fileResource.bundle.url(forResource: fileResource)
+        }
+
         fileprivate init() {}
     }
 
@@ -74,7 +83,7 @@ struct R: Rswift.Validatable {
 
     /// This `R.string` struct is generated, and contains static references to 1 localization tables.
     struct string {
-        /// This `R.string.localizable` struct is generated, and contains static references to 39 localization keys.
+        /// This `R.string.localizable` struct is generated, and contains static references to 40 localization keys.
         struct localizable {
             /// Value: About app
             static let settings_about_app = Rswift.StringResource(key: "settings_about_app", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
@@ -114,6 +123,8 @@ struct R: Rswift.Validatable {
             static let login_view_button_title = Rswift.StringResource(key: "login_view_button_title", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
             /// Value: Logout
             static let settings_logout = Rswift.StringResource(key: "settings_logout", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+            /// Value: Map
+            static let map_title = Rswift.StringResource(key: "map_title", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
             /// Value: New password
             static let changepwd_new_password_placeholder = Rswift.StringResource(key: "changepwd_new_password_placeholder", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
             /// Value: OK
@@ -248,6 +259,11 @@ struct R: Rswift.Validatable {
             /// Value: Logout
             static func settings_logout(_: Void = ()) -> String {
                 return NSLocalizedString("settings_logout", bundle: R.hostingBundle, comment: "")
+            }
+
+            /// Value: Map
+            static func map_title(_: Void = ()) -> String {
+                return NSLocalizedString("map_title", bundle: R.hostingBundle, comment: "")
             }
 
             /// Value: New password

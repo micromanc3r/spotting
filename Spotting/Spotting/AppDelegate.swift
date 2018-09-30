@@ -6,6 +6,7 @@
 //  Copyright © 2018 micromanc3r. All rights reserved.
 //
 
+import GoogleMaps
 import MicroLogger
 import UIKit
 
@@ -15,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_: UIApplication, didFinishLaunchingWithOptions _: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         setUpLogs()
-
+        setUpGoogleMaps()
         startCoordinatorFlow()
 
         return true
@@ -28,11 +29,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         coordinator?.start()
     }
 
-    func setUpLogs() {
+    private func setUpLogs() {
         #if DEBUG
             MLogger.logLevel = .verbose
         #else
             MLogger.logLevel = .error
         #endif
+    }
+
+    private func setUpGoogleMaps() {
+        GMSServices.provideAPIKey(Constants.GoogleAPI.apiKey)
     }
 }
