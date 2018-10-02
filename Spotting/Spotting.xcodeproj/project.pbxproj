@@ -54,6 +54,7 @@
 		6D202F5F2160BEC600B96BD3 /* GooglePlaces.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 6D202F5E2160BEC600B96BD3 /* GooglePlaces.bundle */; };
 		6D202F612160F8CC00B96BD3 /* SpotsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D202F602160F8CC00B96BD3 /* SpotsTableView.swift */; };
 		6D202F632160F94600B96BD3 /* NITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D202F622160F94600B96BD3 /* NITableView.swift */; };
+		6D202F652164126000B96BD3 /* Spot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D202F642164126000B96BD3 /* Spot.swift */; };
 		6D2E2A9821446A5000929C57 /* LoginViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D2E2A9721446A5000929C57 /* LoginViewDelegate.swift */; };
 		6D2E2A9B21464A3C00929C57 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D2E2A9A21464A3C00929C57 /* SignupViewController.swift */; };
 		6D2E2A9D21464A5400929C57 /* SignupDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D2E2A9C21464A5400929C57 /* SignupDelegate.swift */; };
@@ -140,6 +141,7 @@
 		6D202F5E2160BEC600B96BD3 /* GooglePlaces.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GooglePlaces.bundle; path = GooglePlaces.framework/Resources/GooglePlaces.bundle; sourceTree = "<group>"; };
 		6D202F602160F8CC00B96BD3 /* SpotsTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotsTableView.swift; sourceTree = "<group>"; };
 		6D202F622160F94600B96BD3 /* NITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NITableView.swift; sourceTree = "<group>"; };
+		6D202F642164126000B96BD3 /* Spot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spot.swift; sourceTree = "<group>"; };
 		6D2E2A9721446A5000929C57 /* LoginViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewDelegate.swift; sourceTree = "<group>"; };
 		6D2E2A9A21464A3C00929C57 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		6D2E2A9C21464A5400929C57 /* SignupDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupDelegate.swift; sourceTree = "<group>"; };
@@ -214,6 +216,7 @@
 		6D202EF7215AD62800B96BD3 /* SpotsList */ = {
 			isa = PBXGroup;
 			children = (
+				6D202F642164126000B96BD3 /* Spot.swift */,
 				6D202EFB215AD66900B96BD3 /* SpotsListViewController.swift */,
 			);
 			path = SpotsList;
@@ -739,6 +742,7 @@
 				6D2E2AA0214846F300929C57 /* ForgotPasswordViewController.swift in Sources */,
 				6D202F2B215F736000B96BD3 /* EmailSender.swift in Sources */,
 				6DCBA1552141BD5700B85C6F /* Coordinator.swift in Sources */,
+				6D202F652164126000B96BD3 /* Spot.swift in Sources */,
 				6D202F1A215E5A8700B96BD3 /* ContactSettingsItem.swift in Sources */,
 				6D202F632160F94600B96BD3 /* NITableView.swift in Sources */,
 				6D202F0E215C2B4A00B96BD3 /* HelpViewController.swift in Sources */,
