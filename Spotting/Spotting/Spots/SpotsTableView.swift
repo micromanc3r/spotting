@@ -8,4 +8,10 @@
 
 import UIKit
 
-class SpotsTableView: NITableView {}
+class SpotsTableView: NITableView {
+    override init() {
+        super.init()
+
+        register(SpotTableViewCell.self, forCellReuseIdentifier: SpotTableViewCell.reuseIdentifier)
+    }
+}

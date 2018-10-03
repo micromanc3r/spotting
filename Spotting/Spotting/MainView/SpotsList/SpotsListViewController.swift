@@ -51,6 +51,6 @@ extension SpotsListViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return tableView.dequeueReusableCell(withIdentifier: "test", for: indexPath)
+        return tableView.dequeueReusableCell(withIdentifier: SpotTableViewCell.reuseIdentifier, for: indexPath)
     }
 }
