@@ -216,7 +216,6 @@
 		6D202EF7215AD62800B96BD3 /* SpotsList */ = {
 			isa = PBXGroup;
 			children = (
-				6D202F642164126000B96BD3 /* Spot.swift */,
 				6D202EFB215AD66900B96BD3 /* SpotsListViewController.swift */,
 			);
 			path = SpotsList;
@@ -320,6 +319,15 @@
 			path = Map;
 			sourceTree = "<group>";
 		};
+		6D202F66216553B200B96BD3 /* Spots */ = {
+			isa = PBXGroup;
+			children = (
+				6D202F642164126000B96BD3 /* Spot.swift */,
+				6D202F602160F8CC00B96BD3 /* SpotsTableView.swift */,
+			);
+			path = Spots;
+			sourceTree = "<group>";
+		};
 		6D2E2A9921464A2300929C57 /* SignUp */ = {
 			isa = PBXGroup;
 			children = (
@@ -367,6 +375,7 @@
 				6D2E2A9921464A2300929C57 /* SignUp */,
 				6D2E2A9E2148468300929C57 /* ForgotPassword */,
 				6D6E058C214B8D0200283F3A /* MainView */,
+				6D202F66216553B200B96BD3 /* Spots */,
 				6DCBA1602141C5C300B85C6F /* UIComponents */,
 				6D202F2E215F7AC200B96BD3 /* Errors */,
 				6D202F27215F72C000B96BD3 /* Utils */,
@@ -445,7 +454,6 @@
 				6DCBA1692141CD5700B85C6F /* NIView.swift */,
 				6D202F622160F94600B96BD3 /* NITableView.swift */,
 				6DCBA1622141C5E400B85C6F /* UIView+Animations.swift */,
-				6D202F602160F8CC00B96BD3 /* SpotsTableView.swift */,
 			);
 			path = UIComponents;
 			sourceTree = "<group>";
