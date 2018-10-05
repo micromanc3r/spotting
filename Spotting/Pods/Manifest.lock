@@ -4,7 +4,7 @@ PODS:
   - R.swift (4.0.0):
     - R.swift.Library (~> 4.0.0)
   - R.swift.Library (4.0.0)
-  - SwiftFormat/CLI (0.35.5)
+  - SwiftFormat/CLI (0.35.6)
 
 DEPENDENCIES:
   - Cartography (~> 3.1.0)
@@ -25,7 +25,7 @@ SPEC CHECKSUMS:
   microLogger: 04e03d9d146e688255ac2e97a2d71861299c2755
   R.swift: d6a5ec2f55a8441dc0ed9f1f8b37d7d11ae85c66
   R.swift.Library: c3af34921024333546e23b70e70d0b4e0cffca75
-  SwiftFormat: 4b7b2a64127283611b14d858321758fd75673c7c
+  SwiftFormat: 92cd208b201c0a44dd65657280df42c37950261b
 
 PODFILE CHECKSUM: 46367c41633941bca3070b4e928ac9713b25f673
 
