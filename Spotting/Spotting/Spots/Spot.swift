@@ -15,7 +15,7 @@ struct Spot {
     var type: SpotType
     var spotSurface: SpotSurface
     var location: Location
-    var image: UIImage
+    var image: UIImage?
     var skate: Bool
     var bike: Bool
     var Roller: Bool

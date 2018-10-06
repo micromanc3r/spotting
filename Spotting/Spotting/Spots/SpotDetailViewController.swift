@@ -31,10 +31,13 @@ extension SpotDetailViewController {
     private func prepareLayout() {
         view.backgroundColor = .white
 
+        prepareSpotImage()
+        prepareSpotTitle()
+
         constrain(view, spotImageView, titleLabel) { superview, spotImageView, titleLabel in
             spotImageView.top == superview.top
             spotImageView.left == superview.left
-            spotImageView.left == superview.right
+            spotImageView.right == superview.right
             spotImageView.height == spotImageView.width
 
             titleLabel.bottom == spotImageView.bottom - 16
