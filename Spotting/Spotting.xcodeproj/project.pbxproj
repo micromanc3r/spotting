@@ -56,6 +56,7 @@
 		6D202F632160F94600B96BD3 /* NITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D202F622160F94600B96BD3 /* NITableView.swift */; };
 		6D202F652164126000B96BD3 /* Spot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D202F642164126000B96BD3 /* Spot.swift */; };
 		6D202F682165541D00B96BD3 /* SpotTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D202F672165541D00B96BD3 /* SpotTableViewCell.swift */; };
+		6D202F6A2169567000B96BD3 /* SpotDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D202F692169567000B96BD3 /* SpotDetailViewController.swift */; };
 		6D2E2A9821446A5000929C57 /* LoginViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D2E2A9721446A5000929C57 /* LoginViewDelegate.swift */; };
 		6D2E2A9B21464A3C00929C57 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D2E2A9A21464A3C00929C57 /* SignupViewController.swift */; };
 		6D2E2A9D21464A5400929C57 /* SignupDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D2E2A9C21464A5400929C57 /* SignupDelegate.swift */; };
@@ -144,6 +145,7 @@
 		6D202F622160F94600B96BD3 /* NITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NITableView.swift; sourceTree = "<group>"; };
 		6D202F642164126000B96BD3 /* Spot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spot.swift; sourceTree = "<group>"; };
 		6D202F672165541D00B96BD3 /* SpotTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotTableViewCell.swift; sourceTree = "<group>"; };
+		6D202F692169567000B96BD3 /* SpotDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotDetailViewController.swift; sourceTree = "<group>"; };
 		6D2E2A9721446A5000929C57 /* LoginViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewDelegate.swift; sourceTree = "<group>"; };
 		6D2E2A9A21464A3C00929C57 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		6D2E2A9C21464A5400929C57 /* SignupDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupDelegate.swift; sourceTree = "<group>"; };
@@ -327,6 +329,7 @@
 				6D202F642164126000B96BD3 /* Spot.swift */,
 				6D202F602160F8CC00B96BD3 /* SpotsTableView.swift */,
 				6D202F672165541D00B96BD3 /* SpotTableViewCell.swift */,
+				6D202F692169567000B96BD3 /* SpotDetailViewController.swift */,
 			);
 			path = Spots;
 			sourceTree = "<group>";
@@ -755,6 +758,7 @@
 				6DCBA1552141BD5700B85C6F /* Coordinator.swift in Sources */,
 				6D202F652164126000B96BD3 /* Spot.swift in Sources */,
 				6D202F1A215E5A8700B96BD3 /* ContactSettingsItem.swift in Sources */,
+				6D202F6A2169567000B96BD3 /* SpotDetailViewController.swift in Sources */,
 				6D202F632160F94600B96BD3 /* NITableView.swift in Sources */,
 				6D202F0E215C2B4A00B96BD3 /* HelpViewController.swift in Sources */,
 				6D202F0A215C2AFE00B96BD3 /* PrivacyPolicyViewController.swift in Sources */,
