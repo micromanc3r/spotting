@@ -14,6 +14,7 @@ class SpotDetailViewController: NIViewController {
 
     let spotImageView = UIImageView()
     let titleLabel = UILabel()
+    let spotDetailTableView = SpotDetailTableView()
 
     init(withSpot spot: Spot) {
         self.spot = spot
@@ -33,8 +34,9 @@ extension SpotDetailViewController {
 
         prepareSpotImage()
         prepareSpotTitle()
+        prepareSpotDetailTableView()
 
-        constrain(view, spotImageView, titleLabel) { superview, spotImageView, titleLabel in
+        constrain(view.safeAreaLayoutGuide, spotImageView, titleLabel) { superview, spotImageView, titleLabel in
             spotImageView.top == superview.top
             spotImageView.left == superview.left
             spotImageView.right == superview.right
@@ -43,6 +45,13 @@ extension SpotDetailViewController {
             titleLabel.bottom == spotImageView.bottom - 16
             titleLabel.left == spotImageView.left + 16
             titleLabel.right == spotImageView.right - 16
+        }
+
+        constrain(view, spotImageView, spotDetailTableView) { superview, spotImageView, spotDetailTableView in
+            spotDetailTableView.top == spotImageView.bottom
+            spotDetailTableView.left == superview.left
+            spotDetailTableView.right == superview.right
+            spotDetailTableView.bottom == superview.bottom
         }
     }
 
@@ -54,5 +63,20 @@ extension SpotDetailViewController {
     private func prepareSpotTitle() {
         titleLabel.text = spot.title
         view.addSubview(titleLabel)
+    }
+
+    private func prepareSpotDetailTableView() {
+        spotDetailTableView.dataSource = self
+        view.addSubview(spotDetailTableView)
+    }
+}
+
+extension SpotDetailViewController: UITableViewDataSource {
+    func tableView(_: UITableView, numberOfRowsInSection _: Int) -> Int {
+        return 10
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        return tableView.dequeueReusableCell(withIdentifier: SpotDetailTableViewCell.reuseIdentifier, for: indexPath)
     }
 }
