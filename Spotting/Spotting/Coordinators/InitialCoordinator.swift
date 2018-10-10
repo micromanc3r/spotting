@@ -9,7 +9,7 @@
 import MicroLogger
 import UIKit
 
-class MainCoordinator: Coordinator {
+class InitialCoordinator: Coordinator {
     let window: UIWindow
     let navigationController = UINavigationController()
     let settingsStorage: SettingsStorage
@@ -41,7 +41,7 @@ class MainCoordinator: Coordinator {
     }
 }
 
-extension MainCoordinator: LoginViewDelegate {
+extension InitialCoordinator: LoginViewDelegate {
     func loginSuccessful() {
         MLogger.logVerbose(sender: self,
                            andMessage: "Login successful")
@@ -99,6 +99,6 @@ extension MainCoordinator: LoginViewDelegate {
     }
 }
 
-extension MainCoordinator: SignupDelegate {}
+extension InitialCoordinator: SignupDelegate {}
 
-extension MainCoordinator: ForgotPasswordDelegate {}
+extension InitialCoordinator: ForgotPasswordDelegate {}

@@ -13,7 +13,7 @@ import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-    var coordinator: MainCoordinator?
+    var coordinator: InitialCoordinator?
 
     func application(_: UIApplication, didFinishLaunchingWithOptions _: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         setUpLogs()
@@ -25,7 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func startCoordinatorFlow() {
         let window = UIWindow(frame: UIScreen.main.bounds)
-        coordinator = MainCoordinator(withWindow: window,
+        coordinator = InitialCoordinator(withWindow: window,
                                       andStorage: DefaultSettingsStorage())
         coordinator?.start()
     }
