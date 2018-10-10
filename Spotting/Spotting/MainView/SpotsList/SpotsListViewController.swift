@@ -66,7 +66,8 @@ extension SpotsListViewController: UITableViewDelegate {
                         image: R.image.icon(),
                         skate: true,
                         bike: true,
-                        Roller: true)
+                        roller: true,
+                        comments: [Comment(userName: "User2", text: "blabla")])
         let detailVc = SpotDetailViewController(withSpot: spot)
         navigationController?.pushViewController(detailVc, animated: true)
     }

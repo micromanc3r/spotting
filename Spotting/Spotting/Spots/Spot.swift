@@ -18,7 +18,8 @@ struct Spot {
     var image: UIImage?
     var skate: Bool
     var bike: Bool
-    var Roller: Bool
+    var roller: Bool
+    var comments: [Comment]
 
     var detailFields: [String] {
         return ["location", userName, type.rawValue, spotSurface.rawValue]
