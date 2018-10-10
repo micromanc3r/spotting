@@ -26,7 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func startCoordinatorFlow() {
         let window = UIWindow(frame: UIScreen.main.bounds)
         coordinator = InitialCoordinator(withWindow: window,
-                                      andStorage: DefaultSettingsStorage())
+                                         andStorage: DefaultSettingsStorage())
         coordinator?.start()
     }
 

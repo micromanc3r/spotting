@@ -21,11 +21,13 @@ class InitialCoordinator: Coordinator {
 
     func start() {
         if settingsStorage.userIsLoggedIn() {
+            #if DEBUG
+                settingsStorage.store(loggedIn: false)
+            #endif
             startMainFlow()
         } else {
             startLoginFlow()
         }
-        window.makeKeyAndVisible()
     }
 
     func startLoginFlow() {
@@ -34,10 +36,12 @@ class InitialCoordinator: Coordinator {
                                                 animated: false)
 
         window.rootViewController = navigationController
+        window.makeKeyAndVisible()
     }
 
     func startMainFlow() {
-        window.rootViewController = navigationController
+        let mainCoordinator = MainCoordinator(withWindow: window)
+        mainCoordinator.start()
     }
 }
 
@@ -45,41 +49,8 @@ extension InitialCoordinator: LoginViewDelegate {
     func loginSuccessful() {
         MLogger.logVerbose(sender: self,
                            andMessage: "Login successful")
-
-        let spotsList = SpotsListViewController()
-        let map = MapViewController()
-        let settings = SettingsViewController()
-
-        spotsList.tabBarItem = UITabBarItem(title: spotsList.title,
-                                            image: R.image.icon(),
-                                            selectedImage: R.image.icon())
-        map.tabBarItem = UITabBarItem(title: map.title,
-                                      image: R.image.icon(),
-                                      selectedImage: R.image.icon())
-        settings.tabBarItem = UITabBarItem(title: settings.title,
-                                           image: R.image.icon(),
-                                           selectedImage: R.image.icon())
-
-        let mainVC = MainTabBarController(withViewControllers: [spotsList,
-                                                                map,
-                                                                settings])
-        guard let rootViewController = window.rootViewController else {
-            return
-        }
-
-        let navigationVC = UINavigationController()
-        navigationVC.view.backgroundColor = .white
-        navigationVC.viewControllers = [mainVC]
-        navigationVC.view.frame = rootViewController.view.frame
-        navigationVC.view.layoutIfNeeded()
-
-        UIView.transition(with: window,
-                          duration: 0.3,
-                          options: .transitionCrossDissolve,
-                          animations: {
-                              self.window.rootViewController = navigationVC
-                          },
-                          completion: nil)
+        settingsStorage.store(loggedIn: true)
+        startMainFlow()
     }
 
     func newUserSignUp() {
