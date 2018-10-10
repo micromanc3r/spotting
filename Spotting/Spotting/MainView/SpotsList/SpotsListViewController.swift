@@ -59,7 +59,7 @@ extension SpotsListViewController: UITableViewDataSource {
 extension SpotsListViewController: UITableViewDelegate {
     func tableView(_: UITableView, didSelectRowAt _: IndexPath) {
         let spot = Spot(title: "TEST",
-                        userName: "",
+                        userName: "User",
                         type: .ledge,
                         spotSurface: .concrete,
                         location: Location(lattitude: 0.2, longitude: 0.2),

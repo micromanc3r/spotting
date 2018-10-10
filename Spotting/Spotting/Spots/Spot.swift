@@ -19,13 +19,17 @@ struct Spot {
     var skate: Bool
     var bike: Bool
     var Roller: Bool
+
+    var detailFields: [String] {
+        return ["location", userName, type.rawValue, spotSurface.rawValue]
+    }
 }
 
-enum SpotType {
+enum SpotType: String {
     case ledge
 }
 
-enum SpotSurface {
+enum SpotSurface: String {
     case concrete
 }
 

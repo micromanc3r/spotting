@@ -10,14 +10,14 @@ import Cartography
 import UIKit
 
 class SpotDetailViewController: NIViewController {
-    let spot: Spot
-
     let spotImageView = UIImageView()
     let titleLabel = UILabel()
     let spotDetailTableView = SpotDetailTableView()
 
+    let viewModel: SpotDetailViewModel
+
     init(withSpot spot: Spot) {
-        self.spot = spot
+        viewModel = SpotDetailViewModel(spot: spot)
         super.init()
     }
 
@@ -56,12 +56,12 @@ extension SpotDetailViewController {
     }
 
     private func prepareSpotImage() {
-        spotImageView.image = spot.image
+        spotImageView.image = viewModel.spot.image
         view.addSubview(spotImageView)
     }
 
     private func prepareSpotTitle() {
-        titleLabel.text = spot.title
+        titleLabel.text = viewModel.spot.title
         view.addSubview(titleLabel)
     }
 
@@ -73,10 +73,12 @@ extension SpotDetailViewController {
 
 extension SpotDetailViewController: UITableViewDataSource {
     func tableView(_: UITableView, numberOfRowsInSection _: Int) -> Int {
-        return 10
+        return viewModel.detailRows()
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return tableView.dequeueReusableCell(withIdentifier: SpotDetailTableViewCell.reuseIdentifier, for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: SpotDetailTableViewCell.reuseIdentifier, for: indexPath)
+        cell.textLabel?.text = viewModel.detailValue(forRow: indexPath.row)
+        return cell
     }
 }
