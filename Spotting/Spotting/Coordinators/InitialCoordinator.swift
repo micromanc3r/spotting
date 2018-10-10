@@ -13,9 +13,11 @@ class InitialCoordinator: Coordinator {
     let window: UIWindow
     let navigationController = UINavigationController()
     let settingsStorage: SettingsStorage
+    let mainCoordinator: MainCoordinator
 
     init(withWindow window: UIWindow, andStorage storage: SettingsStorage) {
         self.window = window
+        mainCoordinator = MainCoordinator(withWindow: window)
         settingsStorage = storage
     }
 
@@ -40,7 +42,6 @@ class InitialCoordinator: Coordinator {
     }
 
     func startMainFlow() {
-        let mainCoordinator = MainCoordinator(withWindow: window)
         mainCoordinator.start()
     }
 }

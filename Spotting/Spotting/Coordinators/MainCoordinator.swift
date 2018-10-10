@@ -17,7 +17,7 @@ class MainCoordinator: Coordinator {
     }
 
     func start() {
-        let spotsList = SpotsListViewController()
+        let spotsList = SpotsListViewController(withDelegate: self)
         let map = MapViewController()
         let settings = SettingsViewController()
 
@@ -55,5 +55,17 @@ class MainCoordinator: Coordinator {
                               self.window.makeKeyAndVisible()
                           },
                           completion: nil)
+    }
+}
+
+extension MainCoordinator: SpotListDelegate {
+    func showDetail(forSpot spot: Spot) {
+        let detailVc = SpotDetailViewController(withSpot: spot, andDelegate: self)
+        navigationController.pushViewController(detailVc, animated: true)
+    }
+
+    func showComments(forSpot spot: Spot) {
+        let commentsVC = CommentsViewController(withComments: spot.comments)
+        navigationController.pushViewController(commentsVC, animated: true)
     }
 }

@@ -10,13 +10,16 @@ import Cartography
 import UIKit
 
 class SpotDetailViewController: NIViewController {
+    unowned var delegate: SpotListDelegate
+
     let spotImageView = UIImageView()
     let titleLabel = UILabel()
     let spotDetailTableView = SpotDetailTableView()
 
     let viewModel: SpotDetailViewModel
 
-    init(withSpot spot: Spot) {
+    init(withSpot spot: Spot, andDelegate delegate: SpotListDelegate) {
+        self.delegate = delegate
         viewModel = SpotDetailViewModel(spot: spot)
         super.init()
     }
@@ -25,6 +28,15 @@ class SpotDetailViewController: NIViewController {
         super.viewDidLoad()
 
         prepareLayout()
+
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: R.string.localizable.spot_comments(),
+                                                            style: .plain,
+                                                            target: self,
+                                                            action: #selector(showComments))
+    }
+
+    @objc func showComments() {
+        delegate.showComments(forSpot: viewModel.spot)
     }
 }
 

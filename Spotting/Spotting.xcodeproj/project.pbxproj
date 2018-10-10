@@ -64,6 +64,7 @@
 		6D202F75216E7EBB00B96BD3 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D202F74216E7EBB00B96BD3 /* Comment.swift */; };
 		6D202F77216E7F2800B96BD3 /* CommentsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D202F76216E7F2800B96BD3 /* CommentsViewModel.swift */; };
 		6D202F79216E833200B96BD3 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D202F78216E833200B96BD3 /* MainCoordinator.swift */; };
+		6D202F7B216E867A00B96BD3 /* SpotsListDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D202F7A216E867A00B96BD3 /* SpotsListDelegate.swift */; };
 		6D2E2A9821446A5000929C57 /* LoginViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D2E2A9721446A5000929C57 /* LoginViewDelegate.swift */; };
 		6D2E2A9B21464A3C00929C57 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D2E2A9A21464A3C00929C57 /* SignupViewController.swift */; };
 		6D2E2A9D21464A5400929C57 /* SignupDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D2E2A9C21464A5400929C57 /* SignupDelegate.swift */; };
@@ -160,6 +161,7 @@
 		6D202F74216E7EBB00B96BD3 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		6D202F76216E7F2800B96BD3 /* CommentsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsViewModel.swift; sourceTree = "<group>"; };
 		6D202F78216E833200B96BD3 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		6D202F7A216E867A00B96BD3 /* SpotsListDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotsListDelegate.swift; sourceTree = "<group>"; };
 		6D2E2A9721446A5000929C57 /* LoginViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewDelegate.swift; sourceTree = "<group>"; };
 		6D2E2A9A21464A3C00929C57 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		6D2E2A9C21464A5400929C57 /* SignupDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupDelegate.swift; sourceTree = "<group>"; };
@@ -235,6 +237,7 @@
 			isa = PBXGroup;
 			children = (
 				6D202EFB215AD66900B96BD3 /* SpotsListViewController.swift */,
+				6D202F7A216E867A00B96BD3 /* SpotsListDelegate.swift */,
 			);
 			path = SpotsList;
 			sourceTree = "<group>";
@@ -798,6 +801,7 @@
 				6D202F6C216C02F400B96BD3 /* SpotDetailTableView.swift in Sources */,
 				6D202F35216023CC00B96BD3 /* MapViewController.swift in Sources */,
 				6D202F322160214200B96BD3 /* UIApplication+Version.swift in Sources */,
+				6D202F7B216E867A00B96BD3 /* SpotsListDelegate.swift in Sources */,
 				6D202F73216E7E8700B96BD3 /* CommentsViewController.swift in Sources */,
 				6D202F6E216C034500B96BD3 /* SpotDetailTableViewCell.swift in Sources */,
 				6D202F1C215E5AE400B96BD3 /* LogoutSettingsItem.swift in Sources */,

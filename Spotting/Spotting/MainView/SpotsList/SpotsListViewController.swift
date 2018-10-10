@@ -10,9 +10,12 @@ import Cartography
 import UIKit
 
 class SpotsListViewController: NIViewController {
+    unowned var delegate: SpotListDelegate
+
     let spotsTableView = SpotsTableView()
 
-    override init() {
+    init(withDelegate delegate: SpotListDelegate) {
+        self.delegate = delegate
         super.init()
         title = R.string.localizable.list_title()
     }
@@ -68,7 +71,6 @@ extension SpotsListViewController: UITableViewDelegate {
                         bike: true,
                         roller: true,
                         comments: [Comment(userName: "User2", text: "blabla")])
-        let detailVc = SpotDetailViewController(withSpot: spot)
-        navigationController?.pushViewController(detailVc, animated: true)
+        delegate.showDetail(forSpot: spot)
     }
 }
