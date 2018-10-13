@@ -91,7 +91,7 @@ struct R: Rswift.Validatable {
 
     /// This `R.string` struct is generated, and contains static references to 1 localization tables.
     struct string {
-        /// This `R.string.localizable` struct is generated, and contains static references to 41 localization keys.
+        /// This `R.string.localizable` struct is generated, and contains static references to 42 localization keys.
         struct localizable {
             /// Value: About app
             static let settings_about_app = Rswift.StringResource(key: "settings_about_app", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
@@ -135,6 +135,8 @@ struct R: Rswift.Validatable {
             static let settings_logout = Rswift.StringResource(key: "settings_logout", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
             /// Value: Map
             static let map_title = Rswift.StringResource(key: "map_title", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+            /// Value: New Spot
+            static let new_spot = Rswift.StringResource(key: "new_spot", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
             /// Value: New password
             static let changepwd_new_password_placeholder = Rswift.StringResource(key: "changepwd_new_password_placeholder", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
             /// Value: OK
@@ -279,6 +281,11 @@ struct R: Rswift.Validatable {
             /// Value: Map
             static func map_title(_: Void = ()) -> String {
                 return NSLocalizedString("map_title", bundle: R.hostingBundle, comment: "")
+            }
+
+            /// Value: New Spot
+            static func new_spot(_: Void = ()) -> String {
+                return NSLocalizedString("new_spot", bundle: R.hostingBundle, comment: "")
             }
 
             /// Value: New password
