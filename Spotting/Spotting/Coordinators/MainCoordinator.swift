@@ -12,6 +12,8 @@ class MainCoordinator: Coordinator {
     let window: UIWindow
     let navigationController = UINavigationController()
 
+    var childCoordinator: Coordinator?
+
     init(withWindow window: UIWindow) {
         self.window = window
     }
@@ -33,7 +35,8 @@ class MainCoordinator: Coordinator {
 
         let mainVC = MainTabBarController(withViewControllers: [spotsList,
                                                                 map,
-                                                                settings])
+                                                                settings],
+                                          tabBarDelegate: self)
 
         navigationController.view.backgroundColor = .white
         navigationController.viewControllers = [mainVC]
@@ -58,6 +61,12 @@ class MainCoordinator: Coordinator {
     }
 }
 
+extension MainCoordinator: CoordinatorDelegate {
+    func didFinishCoordinating() {
+        childCoordinator = nil
+    }
+}
+
 extension MainCoordinator: SpotListDelegate {
     func showDetail(forSpot spot: Spot) {
         let detailVc = SpotDetailViewController(withSpot: spot, andDelegate: self)
@@ -67,5 +76,15 @@ extension MainCoordinator: SpotListDelegate {
     func showComments(forSpot spot: Spot) {
         let commentsVC = CommentsViewController(withComments: spot.comments)
         navigationController.pushViewController(commentsVC, animated: true)
+    }
+}
+
+extension MainCoordinator: MainTabBarDelegate {
+    func showNewSpotCreation() {
+        let newSpotCoordinator = NewSpotCoordinator(presentingController: navigationController)
+        newSpotCoordinator.delegate = self
+        newSpotCoordinator.start()
+
+        childCoordinator = newSpotCoordinator
     }
 }

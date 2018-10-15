@@ -91,7 +91,7 @@ struct R: Rswift.Validatable {
 
     /// This `R.string` struct is generated, and contains static references to 1 localization tables.
     struct string {
-        /// This `R.string.localizable` struct is generated, and contains static references to 42 localization keys.
+        /// This `R.string.localizable` struct is generated, and contains static references to 43 localization keys.
         struct localizable {
             /// Value: About app
             static let settings_about_app = Rswift.StringResource(key: "settings_about_app", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
@@ -101,6 +101,8 @@ struct R: Rswift.Validatable {
             static let changepwd_change_password_button = Rswift.StringResource(key: "changepwd_change_password_button", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
             /// Value: Change password
             static let settings_change_password = Rswift.StringResource(key: "settings_change_password", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+            /// Value: Close
+            static let new_spot_close = Rswift.StringResource(key: "new_spot_close", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
             /// Value: Comments
             static let spot_comments = Rswift.StringResource(key: "spot_comments", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
             /// Value: Confirm new password
@@ -196,6 +198,11 @@ struct R: Rswift.Validatable {
             /// Value: Change password
             static func settings_change_password(_: Void = ()) -> String {
                 return NSLocalizedString("settings_change_password", bundle: R.hostingBundle, comment: "")
+            }
+
+            /// Value: Close
+            static func new_spot_close(_: Void = ()) -> String {
+                return NSLocalizedString("new_spot_close", bundle: R.hostingBundle, comment: "")
             }
 
             /// Value: Comments

@@ -10,8 +10,12 @@ import MicroLogger
 import UIKit
 
 class MainTabBarController: NITabBarController {
-    init(withViewControllers controllers: [UIViewController]) {
+    unowned var tabBarDelegate: MainTabBarDelegate
+
+    init(withViewControllers controllers: [UIViewController], tabBarDelegate: MainTabBarDelegate) {
+        self.tabBarDelegate = tabBarDelegate
         super.init()
+
         delegate = self
         viewControllers = controllers
     }
@@ -25,12 +29,13 @@ class MainTabBarController: NITabBarController {
 extension MainTabBarController {
     @objc private func createNewSpot() {
         MLogger.logVerbose(sender: self, andMessage: "Create new spot")
+        tabBarDelegate.showNewSpotCreation()
     }
 }
 
 extension MainTabBarController {
     private func prepareLayout() {
-        let newSpotButtonItem = UIBarButtonItem(title: "New Spot",
+        let newSpotButtonItem = UIBarButtonItem(title: R.string.localizable.new_spot(),
                                                 style: .plain,
                                                 target: self,
                                                 action: #selector(createNewSpot))

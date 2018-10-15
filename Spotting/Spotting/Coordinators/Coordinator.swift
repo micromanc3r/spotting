@@ -7,7 +7,12 @@
 //
 
 import Foundation
+import MicroLogger
 
-protocol Coordinator {
+protocol Coordinator: class {
     func start()
+}
+
+protocol CoordinatorDelegate: class {
+    func didFinishCoordinating()
 }
