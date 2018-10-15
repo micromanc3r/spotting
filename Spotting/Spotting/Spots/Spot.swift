@@ -10,16 +10,16 @@ import CoreLocation
 import UIKit
 
 struct Spot {
-    var title: String
-    var userName: String
-    var type: SpotType
-    var spotSurface: SpotSurface
-    var location: Location
+    var title: String = ""
+    var userName: String = ""
+    var type: SpotType = .unknown
+    var spotSurface: SpotSurface = .unknown
+    var location: Location = Location(lattitude: 0, longitude: 0)
     var image: UIImage?
-    var skate: Bool
-    var bike: Bool
-    var roller: Bool
-    var comments: [Comment]
+    var skate: Bool = false
+    var bike: Bool = false
+    var roller: Bool = false
+    var comments: [Comment] = []
 
     var detailFields: [String] {
         return ["location", userName, type.rawValue, spotSurface.rawValue]
@@ -27,10 +27,12 @@ struct Spot {
 }
 
 enum SpotType: String {
+    case unknown
     case ledge
 }
 
 enum SpotSurface: String {
+    case unknown
     case concrete
 }
 

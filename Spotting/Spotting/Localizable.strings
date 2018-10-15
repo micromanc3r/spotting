@@ -49,3 +49,4 @@
 "spot_comments" = "Comments";
 "new_spot" = "New Spot";
 "new_spot_close" = "Close";
+"new_spot_form_name" = "Name of the spot";

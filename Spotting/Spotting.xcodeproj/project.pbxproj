@@ -69,6 +69,7 @@
 		6D202F8021744C6300B96BD3 /* NewSpotCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D202F7F21744C6300B96BD3 /* NewSpotCoordinator.swift */; };
 		6D202F822174537700B96BD3 /* NewSpotDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D202F812174537700B96BD3 /* NewSpotDelegate.swift */; };
 		6D202F8621745CFE00B96BD3 /* MainTabBarDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D202F8521745CFE00B96BD3 /* MainTabBarDelegate.swift */; };
+		6D202F882174FC7F00B96BD3 /* NewSpotFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D202F872174FC7F00B96BD3 /* NewSpotFormView.swift */; };
 		6D2E2A9821446A5000929C57 /* LoginViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D2E2A9721446A5000929C57 /* LoginViewDelegate.swift */; };
 		6D2E2A9B21464A3C00929C57 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D2E2A9A21464A3C00929C57 /* SignupViewController.swift */; };
 		6D2E2A9D21464A5400929C57 /* SignupDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D2E2A9C21464A5400929C57 /* SignupDelegate.swift */; };
@@ -170,6 +171,7 @@
 		6D202F7F21744C6300B96BD3 /* NewSpotCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewSpotCoordinator.swift; sourceTree = "<group>"; };
 		6D202F812174537700B96BD3 /* NewSpotDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewSpotDelegate.swift; sourceTree = "<group>"; };
 		6D202F8521745CFE00B96BD3 /* MainTabBarDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarDelegate.swift; sourceTree = "<group>"; };
+		6D202F872174FC7F00B96BD3 /* NewSpotFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewSpotFormView.swift; sourceTree = "<group>"; };
 		6D2E2A9721446A5000929C57 /* LoginViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewDelegate.swift; sourceTree = "<group>"; };
 		6D2E2A9A21464A3C00929C57 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		6D2E2A9C21464A5400929C57 /* SignupDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupDelegate.swift; sourceTree = "<group>"; };
@@ -377,6 +379,7 @@
 			children = (
 				6D202F7D21739D7600B96BD3 /* NewSpotViewController.swift */,
 				6D202F812174537700B96BD3 /* NewSpotDelegate.swift */,
+				6D202F872174FC7F00B96BD3 /* NewSpotFormView.swift */,
 			);
 			path = NewSpot;
 			sourceTree = "<group>";
@@ -852,6 +855,7 @@
 				6D202F14215E4A4400B96BD3 /* SettingsItem.swift in Sources */,
 				6D2E2AA22148472000929C57 /* ForgotPasswordDelegate.swift in Sources */,
 				6D202F822174537700B96BD3 /* NewSpotDelegate.swift in Sources */,
+				6D202F882174FC7F00B96BD3 /* NewSpotFormView.swift in Sources */,
 				6D202F20215E5B7000B96BD3 /* AboutAppSettingsItem.swift in Sources */,
 				6D202F06215C2A6100B96BD3 /* AboutAppViewController.swift in Sources */,
 				6DCBA1572141BD8300B85C6F /* InitialCoordinator.swift in Sources */,
